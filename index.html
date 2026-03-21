@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PharmacyGuides26 - Master NDDS & Instrumental Analysis for GPAT & NIPER">
+  <title>PharmacyGuides26 | Expert Study Resources</title>
+  <link rel="icon" type="image/png" href="./WhatsApp Image 2026-03-21 at 9.45.11 PM.jpeg">
+  
+  <!-- External Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    html, body { height: 100%; margin: 0; box-sizing: border-box; }
+    .font-heading { font-family: 'DM Serif Display', serif; }
+    .font-body { font-family: 'Outfit', sans-serif; }
+    
+    .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%); }
+    
+    .book-card { transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease; }
+    .book-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15); }
+    
+    .fade-in { animation: fadeIn 0.6s ease forwards; opacity: 0; transform: translateY(12px); }
+    .fade-in-delay-1 { animation-delay: 0.1s; }
+    .fade-in-delay-2 { animation-delay: 0.2s; }
+    .fade-in-delay-3 { animation-delay: 0.3s; }
+    .fade-in-delay-4 { animation-delay: 0.4s; }
+    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+    
+    .hero-pattern {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-pattern::before {
+      content: ''; position: absolute; top: -50%; right: -10%; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%); border-radius: 50%;
+    }
+    .hero-pattern::after {
+      content: ''; position: absolute; bottom: -30%; left: -5%; width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%); border-radius: 50%;
+    }
+
+    /* --- Animated Marquee CSS --- */
+    .marquee-container {
+      display: flex;
+      overflow: hidden;
+      background: #0f172a;
+      color: white;
+      padding: 10px 0;
+      position: relative;
+      z-index: 40;
+      border-bottom: 2px solid #3b82f6;
+    }
+    .marquee-content {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll 20s linear infinite;
+    }
+    .marquee-content span { padding: 0 2rem; font-weight: 600; font-size: 0.875rem; letter-spacing: 0.5px; }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* --- Animated Buy Options CSS --- */
+    .buy-options-container {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transition: max-height 0.4s ease-out, opacity 0.3s ease-out, margin-top 0.3s ease, visibility 0.4s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .buy-options-container.open {
+      max-height: 300px; 
+      opacity: 1;
+      visibility: visible;
+      margin-top: 12px;
+    }
+    .format-btn {
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+    .buy-options-container.open .format-btn { opacity: 1; transform: translateY(0); }
+    .buy-options-container.open .format-btn:hover {
+      transform: translateY(-3px); box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2); background-color: #eff6ff; 
+    }
+    .buy-options-container.open .format-btn:nth-child(1) { transition-delay: 0.1s; }
+    .buy-options-container.open .format-btn:nth-child(2) { transition-delay: 0.2s; }
+    .buy-options-container.open .format-btn:nth-child(3) { transition-delay: 0.3s; }
+
+    .toast-enter { animation: slideUp 0.3s ease forwards; }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .page-transition { animation: pageSlide 0.4s ease forwards; }
+    @keyframes pageSlide { from { opacity: 0; } to { opacity: 1; } }
+/* ⭐ RATING FIX CSS: Ensures the star fills with color */
+#star-rating-input i svg {
+  transition: all 0.2s ease;
+  fill: transparent; /* Default empty state */
+  pointer-events: none; /* Allows click to pass through to the <i> tag */
+}
+
+#star-rating-input i.active svg {
+  fill: #facc15; /* Tailwind yellow-400 */
+  stroke: #facc15;
+}
+    
+  </style>
+</head>
+<body class="h-full font-body" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);">
+  <div id="app-wrapper" class="w-full h-full overflow-auto">
+    
+    <!-- Scrolling Offer Marquee -->
+    <div class="marquee-container">
+      <div class="marquee-content">
+       <span>✨ Featured Book: Nano Particles & Nano Carriers in Drug Delivery — Banny SV & Fardia Banu S</span>
+<span>🧪 Precision Learning: Advanced Instrumental Techniques by Sameera P</span>
+<span>📊 From Basics to Advanced — Master Pharmaceutics & Analysis</span>
+<span>🏆 Comprehensive Guide to Pharmaceutics & Modern Pharmaceutical Analysis</span>
+<span>🚀 Elevate your pharmaceutical knowledge with PharmacyGuides26</span>
+<span>📢 Join our WhatsApp Channel for instant updates & notes</span>
+<span>📲 Stay Connected: Telegram | Instagram | Facebook</span>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed top-24 right-4 z-50 flex flex-col gap-2"></div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden" onclick="toggleMobileMenu(true)"></div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-72 bg-white z-50 transform -translate-x-full transition-transform duration-300 shadow-2xl">
+      <div class="p-6">
+        <div class="flex items-center justify-between mb-8">
+          <div class="flex items-center gap-2">
+            <div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center"><i data-lucide="book-open" class="w-5 h-5 text-white"></i></div>
+            <span class="text-xl font-bold text-blue-900">PharmacyGuides26</span>
+          </div>
+          <button onclick="toggleMobileMenu(true)" class="p-2 hover:bg-gray-100 rounded-lg"><i data-lucide="x" class="w-6 h-6"></i></button>
+        </div>
+        <nav class="flex flex-col gap-2">
+          <a href="#" onclick="navigateTo('home')" class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-700 transition-colors"><i data-lucide="home" class="w-5 h-5"></i> Home</a> 
+          <a href="#" onclick="navigateTo('books')" class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-700 transition-colors"><i data-lucide="library" class="w-5 h-5"></i> Our Books</a> 
+          <a href="#" onclick="navigateTo('offers')" class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-700 transition-colors"><i data-lucide="percent" class="w-5 h-5"></i> Combos & Deals</a> 
+          <a href="#" onclick="navigateTo('reviews')" class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-700 transition-colors"><i data-lucide="star" class="w-5 h-5"></i> Student Reviews</a> 
+          <a href="#" onclick="navigateTo('about')" class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-700 transition-colors"><i data-lucide="users" class="w-5 h-5"></i> Meet The Authors</a> 
+        </nav>
+        <div class="mt-6 pt-6 border-t space-y-2">
+          <button onclick="navigateTo('wishlist')" class="w-full bg-red-50 text-red-600 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-red-100 transition-colors"><i data-lucide="heart" class="w-5 h-5"></i> Saved Books</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header id="navbar" class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between py-3">
+          <div class="flex items-center gap-3">
+            <button onclick="toggleMobileMenu()" class="lg:hidden p-2 hover:bg-gray-100 rounded-lg"><i data-lucide="menu" class="w-6 h-6"></i></button> 
+            <a href="#" onclick="navigateTo('home')" class="flex items-center gap-3">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl gradient-bg flex items-center justify-center shadow-md">
+                <i data-lucide="flask-conical" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+              </div>
+              <div>
+                <h1 class="text-xl sm:text-2xl font-black text-blue-900 leading-none tracking-tight font-heading">PharmacyGuides26</h1>
+                <p class="text-[11px] sm:text-xs text-blue-600 font-bold tracking-wide uppercase mt-0.5">Banny • Farida • Meena • Sameera</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-8">
+            <a href="#" onclick="navigateTo('home')" class="nav-link relative text-gray-700 font-bold hover:text-blue-700 transition-colors">Home</a> 
+            <a href="#" onclick="navigateTo('books')" class="nav-link relative text-gray-700 font-bold hover:text-blue-700 transition-colors">Our Books</a> 
+            <a href="#" onclick="navigateTo('offers')" class="nav-link relative text-gray-700 font-bold hover:text-blue-700 transition-colors flex items-center gap-1">Deals <span class="bg-red-500 text-white text-[10px] px-2 py-0.5 rounded-full pulse-badge uppercase">Hot</span></a> 
+            <a href="#" onclick="navigateTo('reviews')" class="nav-link relative text-gray-700 font-bold hover:text-blue-700 transition-colors">Reviews</a> 
+            <a href="#" onclick="navigateTo('about')" class="nav-link relative text-gray-700 font-bold hover:text-blue-700 transition-colors">Meet the Team</a> 
+          </nav>
+
+          <!-- Right Actions -->
+          <div class="flex items-center gap-2 sm:gap-4">
+            <button onclick="navigateTo('wishlist')" class="p-2 hover:bg-red-50 rounded-xl transition-colors relative hidden sm:block group">
+              <i data-lucide="heart" class="w-6 h-6 text-gray-400 group-hover:text-red-500 transition-colors"></i>
+              <span id="wishlist-count" class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center hidden">0</span>
+            </button> 
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="page-transition">
+      
+      <!-- ================= HOME PAGE ================= -->
+      <div id="page-home">
+        <section class="hero-pattern py-16 sm:py-24 px-4 border-b-4 border-blue-500">
+          <div class="max-w-5xl mx-auto text-center fade-in relative z-20">
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-bold mb-6 tracking-widest uppercase bg-blue-900/50 text-blue-100 border border-blue-400/30 backdrop-blur-sm shadow-inner">
+              <i data-lucide="award" style="width:16px;height:16px;"></i> The Ultimate Guide for Pharmacy Students
+            </div>
+            <h1 class="font-heading text-4xl sm:text-5xl lg:text-7xl leading-tight mb-6 text-white text-shadow">Master Pharmaceutics <br>& Instrumental Analysis</h1>
+            <p class="text-lg sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed text-blue-100 font-medium">Comprehensive guides on drug delivery systems and modern instrumental techniques crafted for deep understanding and real-world application.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <button onclick="navigateTo('books')" class="px-8 py-4 rounded-xl bg-white text-blue-900 font-black text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-2"> 
+                <i data-lucide="library" class="w-5 h-5"></i> Browse Our Books 
+              </button> 
+              <button onclick="navigateTo('offers')" class="px-8 py-4 rounded-xl font-bold text-lg border-2 border-white/50 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all flex items-center justify-center gap-2"> 
+                <i data-lucide="percent" class="w-5 h-5"></i> View Amazon Combos 
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Featured Books Section (Optimized for exactly 2 books) -->
+        <section class="py-16 sm:py-20 bg-white">
+          <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+              <h2 class="font-heading text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Our Core Publications</h2>
+              <p class="text-gray-500 text-lg">Available exclusively worldwide via Amazon</p>
+            </div>
+            <!-- Centered 2-column grid -->
+            <div id="featured-books-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+              <!-- Books injected via JS -->
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= BOOKS PAGE ================= -->
+      <div id="page-books" class="hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+          <div class="text-center mb-12">
+            <h1 class="font-heading text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Complete Catalog</h1>
+            <p class="text-gray-500 text-lg">Detailed insights into our specialized pharmacy textbooks.</p>
+          </div>
+          
+          <div id="all-books-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <!-- Books injected via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= BOOK DETAILS PAGE ================= -->
+      <div id="page-book-details" class="hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+          <nav class="flex items-center gap-2 text-sm text-gray-500 mb-8 bg-white py-3 px-4 rounded-xl shadow-sm border border-gray-100">
+            <a href="#" onclick="navigateTo('home')" class="hover:text-blue-600 font-semibold">Home</a> <i data-lucide="chevron-right" class="w-4 h-4"></i> 
+            <a href="#" onclick="navigateTo('books')" class="hover:text-blue-600 font-semibold">Books</a> <i data-lucide="chevron-right" class="w-4 h-4"></i> 
+            <span id="book-detail-breadcrumb" class="text-gray-900 font-bold">Book Title</span>
+          </nav>
+          <div id="book-details-content"></div>
+        </div>
+      </div>
+
+      <!-- ================= OFFERS PAGE ================= -->
+      <div id="page-offers" class="hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
+          <div class="text-center mb-14">
+            <span class="inline-block bg-red-100 text-red-600 px-5 py-2 rounded-full text-sm font-black mb-4 uppercase tracking-widest shadow-sm">🔥 Exclusive Deals</span>
+            <h1 class="font-heading text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Special Combos</h1>
+            <p class="text-gray-600 text-lg">Save big when you purchase our top-rated Pharmacy Research books through these special Amazon links.</p>
+          </div>
+          <!-- Centered 2-column grid for exactly 2 offers -->
+          <div id="offers-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Offers injected via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= REVIEWS PAGE ================= -->
+      <div id="page-reviews" class="hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+          <div class="text-center mb-12">
+            <h1 class="font-heading text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Student & Researcher Feedback</h1>
+            <p class="text-gray-600 text-lg">See how our NDDS and Analysis books are helping students crack exams across India.</p>
+          </div>
+          
+          <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 mb-12 max-w-3xl mx-auto relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full -translate-y-1/2 translate-x-1/2 -z-10"></div>
+            <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6">Leave Your Review</h3>
+            <form id="review-form" onsubmit="submitReview(event)">
+              <div class="grid sm:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label class="block text-gray-700 font-bold mb-2">Your Name</label> 
+                  <input type="text" id="reviewer-name" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="Ex: Rahul Sharma">
+                </div>
+                <div>
+              <div id="star-rating-input" class="flex gap-2 mb-4">
+  <i data-lucide="star" class="w-8 h-8 text-gray-300 cursor-pointer" onclick="setRating(1)"></i>
+  <i data-lucide="star" class="w-8 h-8 text-gray-300 cursor-pointer" onclick="setRating(2)"></i>
+  <i data-lucide="star" class="w-8 h-8 text-gray-300 cursor-pointer" onclick="setRating(3)"></i>
+  <i data-lucide="star" class="w-8 h-8 text-gray-300 cursor-pointer" onclick="setRating(4)"></i>
+  <i data-lucide="star" class="w-8 h-8 text-gray-300 cursor-pointer" onclick="setRating(5)"></i>
+</div>
+<input type="hidden" id="rating-value" value="0">
+<input type="hidden" id="rating-value" value="0">
+                  <input type="hidden" id="rating-value" value="0">
+                </div>
+              </div>
+              <div class="mb-8">
+                <label class="block text-gray-700 font-bold mb-2">Your Review</label> 
+                <textarea id="review-text" required rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors resize-none" placeholder="How did our books help with your thesis, GPAT, or NIPER prep?"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 text-lg shadow-lg hover:-translate-y-1 transition-all"> 
+                <i data-lucide="send" class="w-5 h-5"></i> Post Review 
+              </button>
+            </form>
+          </div>
+          
+          <div id="all-reviews-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+      </div>
+
+      <!-- ================= ABOUT THE AUTHORS PAGE ================= -->
+      <div id="page-about" class="hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+          <div class="text-center mb-16">
+            <h1 class="font-heading text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Meet The Authors</h1>
+            <div class="max-w-3xl mx-auto py-6 border-y border-gray-200 relative">
+              <i data-lucide="quote" class="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-10 text-gray-200 -z-10"></i>
+              <h2 class="text-2xl font-bold text-blue-900 italic leading-snug">"Education is the wind beneath our wings. We aim to enhance those wings to help you soar to new heights in Pharmacy."</h2>
+            </div>
+          </div>
+          
+          <!-- Team Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+            
+          <!-- Banny S.V. -->
+<div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-blue-100 to-blue-200 text-blue-600 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white outline outline-blue-100">
+    <i data-lucide="laptop" class="w-10 h-10"></i>
+  </div>
+  <h3 class="font-black text-xl text-gray-900 mb-1">Banny S.V.</h3>
+  <p class="text-sm text-blue-600 font-bold uppercase tracking-wider mb-4">Web Developer & Research Author</p>
+  <p class="text-gray-500 text-sm">
+    Lead developer and manager of this platform. Researcher in NDDS & Matrix Tablets. Authored 4 review articles with academic presence on ResearchGate, Google Scholar, and SlideShare.
+  </p>
+</div>
+            <!-- Farida Banu S. -->
+<div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-pink-100 to-pink-200 text-pink-600 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white outline outline-pink-100">
+    <i data-lucide="palette" class="w-10 h-10"></i>
+  </div>
+  <h3 class="font-black text-xl text-gray-900 mb-1">Farida Banu S.</h3>
+  <p class="text-sm text-pink-600 font-bold uppercase tracking-wider mb-4">Design & Promotions Lead</p>
+  <p class="text-gray-500 text-sm">
+    Creative designer and promotions lead with contributions to multiple review articles. Actively manages social media presence and shares academic content through SlideShare.
+  </p>
+</div>
+           <!-- Meena G. -->
+<div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-purple-100 to-purple-200 text-purple-600 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white outline outline-purple-100">
+    <i data-lucide="palette" class="w-10 h-10"></i>
+  </div>
+  <h3 class="font-black text-xl text-gray-900 mb-1">Meena G.</h3>
+  <p class="text-sm text-purple-600 font-bold uppercase tracking-wider mb-4">Design & Promotions Lead</p>
+  <p class="text-gray-500 text-sm">
+    Creative designer and promotions specialist. Contributed as an author for the Moringa Oleifera research project, blending scientific insight with visual communication.
+  </p>
+</div>
+
+<!-- Sameera P. -->
+<div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-green-100 to-green-200 text-green-600 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white outline outline-green-100">
+    <i data-lucide="flask-conical" class="w-10 h-10"></i>
+  </div>
+  <h3 class="font-black text-xl text-gray-900 mb-1">Sameera P.</h3>
+  <p class="text-sm text-green-600 font-bold uppercase tracking-wider mb-4">Pharmaceutics & Digital Lead</p>
+  <p class="text-gray-500 text-sm">
+    Author of the In-Situ Gels research project. Specializes in pharmaceutics and manages social media development, enhancing digital presence and engagement.
+  </p>
+</div>     
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= WISHLIST PAGE ================= -->
+      <div id="page-wishlist" class="hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+          <div class="flex items-center gap-4 mb-8 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+            <div class="w-12 h-12 bg-red-100 text-red-500 rounded-full flex items-center justify-center"><i data-lucide="heart" class="fill-red-500"></i></div>
+            <div>
+              <h1 class="text-2xl font-bold text-gray-900">My Saved Books</h1>
+              <p class="text-gray-500 text-sm">Books you have favorited for later.</p>
+            </div>
+          </div>
+          <div id="wishlist-content" class="grid grid-cols-1 sm:grid-cols-2 gap-8"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (Social Links) -->
+    <footer class="bg-slate-900 text-white mt-auto py-12 border-t-4 border-blue-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="text-center md:text-left">
+            <div class="flex items-center justify-center md:justify-start gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg"><i data-lucide="book-open" class="w-5 h-5 text-white"></i></div>
+              <div>
+                <span class="text-2xl font-heading font-bold text-white block leading-none">PharmacyGuides26 
+              </div>
+            </div>
+            <p class="text-slate-400 mt-2 text-sm">Your Trusted Source for Pharmaceutical Knowledge & Core Publications.
+</span></p>
+            <p class="text-slate-500 mt-1 text-xs">© 2026 All Rights Reserved.</p>
+          </div>
+          
+          <div class="flex flex-col items-center md:items-end">
+            <p class="text-sm text-slate-300 mb-4 font-bold uppercase tracking-widest">Connect With Us</p>
+            <div class="flex gap-4">
+              <!-- WhatsApp -->
+              <a href="https://whatsapp.com/channel/0029VbCU4LOIXnlmAfHBLl2N" target="_blank" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-green-500 transition-all transform hover:-translate-y-1 shadow-lg" title="WhatsApp Channel">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+              </a>
+              <!-- Telegram -->
+              <a href="#" target="_blank" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-all transform hover:-translate-y-1 shadow-lg" title="Telegram">
+                <i data-lucide="send" class="w-5 h-5"></i>
+              </a>
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/pharmacyguides26?igsh=aGVhcDRtNjFnYWs3" target="_blank" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition-all transform hover:-translate-y-1 shadow-lg" title="Instagram">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </a>
+             
+              <!-- Facebook -->
+              <a href="#" target="_blank" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-all transform hover:-translate-y-1 shadow-lg" title="Facebook">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- End App Wrapper -->
+
+  <script>
+    // ================= STATE MANAGEMENT =================
+    let wishlist = [];
+    let reviews = [
+      { reviewer_name: 'Anjali Sharma', rating: 5, review_text: 'The Nanoparticles guide by Banny S.V. & Farida Banu S. completely cleared my doubts on targeted drug delivery.' },
+      { reviewer_name: 'Rahul Verma', rating: 5, review_text: 'Advanced Instrumental Techniques is a masterpiece. The HPLC and Spectroscopy chapters are brilliantly explained for Indian university exams.' },
+      { reviewer_name: 'Sneha Patel', rating: 4, review_text: 'Excellent compilation of nanocarrier formulations. Very practical for JNTUA laboratory scale-ups.' },
+      { reviewer_name: 'Karthik N.', rating: 5, review_text: 'Loved the Kindle version of the NDDS book. The diagrams are crisp and perfectly aligned with the GPAT syllabus.' }
+    ];
+    let currentRating = 0;
+    let currentBookId = null;
+
+    // ================= STRICTLY 2 BOOKS DATA =================
+    const books = [
+      { 
+        id: '1', 
+        title: 'Nano Particles and Nano Carriers in Drug Delivery Systems', 
+        author: 'Banny S.V. & Farida Banu S.', 
+        category: 'NDDS', 
+        price: 1504,
+originalPrice: 10000,
+rating: 4.9,
+reviews: 234,
+discount: 85,
+        description: 'Authored under the guidance of Dr. D. V. Ramanjaneyulu. A comprehensive guide covering targeted delivery, laboratory scale-ups, and formulation details. Essential for final year B.Pharm and M.Pharm research.', 
+        image: "book cover 1.jpeg", 
+        formats: [ 
+          { type: "Paperback", icon: "book", amazonUrl: "https://www.amazon.com/dp/B0GNH4BGWY" }, 
+          { type: "Hardcover", icon: "library", amazonUrl: "https://www.amazon.com/dp/B0GNH4BGWY" }, 
+          { type: "Kindle", icon: "smartphone", amazonUrl: "https://www.amazon.in/dp/B0GN8QDM2R?format=3" } 
+        ] 
+      },
+      { 
+        id: '2', 
+        title: 'Advanced Instrumental Techniques in Analysis', 
+        author: ' Sameera P.', 
+        category: 'Analysis', 
+       price: 1600,
+originalPrice: 11000,
+rating: 4.8,
+reviews: 189,
+discount: 85,
+        description: 'Complete reference for HPLC, Spectroscopy, Chromatography, and quality control mechanisms. Crucial for GPAT preparation and industrial placements.', 
+        image: "891c4d2f-310f-422e-a8ac-920301f247a6.png", 
+        formats: [ 
+          { type: "Paperback", icon: "book", amazonUrl: "https://www.amazon.in" }, 
+          { type: "Kindle", icon: "smartphone", amazonUrl: "https://www.amazon.in" } 
+        ] 
+      }
+    ];
+
+   const offers = [
+  {
+    id: 'o1',
+    title: 'Nano Particles & Nano Carriers in Drug Delivery',
+    description: 'Comprehensive guide on NDDS with detailed concepts and practical insights.',
+    originalPrice: 10000,
+    discountPrice: 1504,
+    discount: 85,
+    tag: 'Best Seller',
+    amazonUrl: "https://www.amazon.com/dp/B0GNH4BGWY"
+  },
+  {
+    id: 'o2',
+    title: 'Advanced Instrumental Techniques',
+    description: 'Master HPLC, Spectroscopy, and modern analytical techniques.',
+    originalPrice: 11000,
+    discountPrice: 1600,
+    discount: 85,
+    tag: 'Popular',
+    amazonUrl: "https://www.amazon.com/dp/B0GNH4BGWY"
+  }
+];
+
+    // ================= INITIALIZATION =================
+    window.onload = () => {
+      loadLocalData();
+      renderFeaturedBooks();
+      renderAllBooks();
+      renderOffers();
+      renderReviews();
+      updateWishlistUI();
+      lucide.createIcons();
+    };
+
+    function loadLocalData() {
+      const savedWishlist = localStorage.getItem('pg26_wishlist');
+      const savedReviews = localStorage.getItem('pg26_reviews');
+      
+      if (savedWishlist) wishlist = JSON.parse(savedWishlist);
+      if (savedReviews) {
+        const parsed = JSON.parse(savedReviews);
+        reviews = [...parsed, ...reviews]; // Put new local reviews first
+      }
+    }
+
+    function saveLocalData() {
+      localStorage.setItem('pg26_wishlist', JSON.stringify(wishlist));
+    }
+
+    // ================= NAVIGATION =================
+    function navigateTo(page, params = {}) {
+      event?.preventDefault();
+      toggleMobileMenu(true);
+
+      document.querySelectorAll('[id^="page-"]').forEach(p => p.classList.add('hidden'));
+
+      const targetPage = document.getElementById(`page-${page}`);
+      if (targetPage) {
+        targetPage.classList.remove('hidden');
+        targetPage.classList.add('page-transition');
+      }
+
+      if (page === 'book-details' && params.bookId) {
+        currentBookId = params.bookId;
+        renderBookDetails(params.bookId);
+      }
+
+      if (page === 'wishlist') renderWishlist();
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function toggleMobileMenu(forceClose = false) {
+      const menu = document.getElementById('mobile-menu');
+      const overlay = document.getElementById('mobile-menu-overlay');
+      
+      if (forceClose || menu.classList.contains('-translate-x-0')) {
+        menu.classList.remove('-translate-x-0');
+        menu.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      } else {
+        menu.classList.remove('-translate-x-full');
+        menu.classList.add('-translate-x-0');
+        overlay.classList.remove('hidden');
+      }
+    }
+
+    function toggleSearch() {
+      const searchBar = document.getElementById('search-bar');
+      searchBar.classList.toggle('hidden');
+      if (!searchBar.classList.contains('hidden')) {
+        document.getElementById('search-input').focus();
+      }
+    }
+
+    function performSearch() {
+      const query = document.getElementById('search-input').value.toLowerCase();
+      if (query) {
+        navigateTo('books');
+        const filtered = books.filter(b => b.title.toLowerCase().includes(query) || b.author.toLowerCase().includes(query) || b.category.toLowerCase().includes(query));
+        renderBooksGrid('all-books-grid', filtered);
+        toggleSearch();
+      }
+    }
+
+    // ================= RENDERING =================
+    function toggleOptions(prefix, bookId) {
+      event.stopPropagation();
+      const container = document.getElementById(`options-${prefix}-${bookId}`);
+      if (container) {
+        container.classList.toggle('open');
+      }
+    }
+
+    function renderFeaturedBooks() {
+      renderBooksGrid('featured-books-grid', books, 'feat');
+    }
+
+    function renderAllBooks() {
+      renderBooksGrid('all-books-grid', books, 'all');
+    }
+
+    function renderBooksGrid(gridId, booksToRender, prefix) {
+      const grid = document.getElementById(gridId);
+      if (grid) {
+        grid.innerHTML = booksToRender.map(book => createBookCard(book, prefix)).join('');
+        lucide.createIcons();
+      }
+    }
+
+    function createBookCard(book, prefix) {
+      const inWishlist = wishlist.includes(book.id);
+      return `
+        <div class="book-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col group h-full relative">
+          <div class="relative bg-slate-50 w-full h-72 flex items-center justify-center p-6 border-b border-gray-100 cursor-pointer" onclick="navigateTo('book-details', {bookId: '${book.id}'})">
+            <img src="${book.image}" class="max-w-full max-h-full object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+            ${book.discount ? `<span class="absolute top-4 left-4 bg-blue-600 text-white px-4 py-1.5 rounded-full text-xs font-black shadow-md uppercase tracking-wider">${book.discount}% OFF</span>` : ''}
+          </div>
+          
+          <button onclick="event.stopPropagation(); toggleWishlist('${book.id}')" class="absolute top-4 right-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 z-10">
+            <i data-lucide="heart" class="w-6 h-6 ${inWishlist ? 'text-red-500 fill-red-500' : 'text-gray-400'}"></i>
+          </button>
+
+          <div class="p-6 flex flex-col flex-grow">
+            <span class="text-xs text-blue-700 font-bold bg-blue-50 border border-blue-100 px-3 py-1 rounded-full w-fit mb-3 uppercase tracking-wider">${book.category}</span>
+            <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 text-xl hover:text-blue-700 cursor-pointer transition-colors" style="min-height: 3.5rem;" onclick="navigateTo('book-details', {bookId: '${book.id}'})">${book.title}</h3>
+            <p class="text-gray-500 text-sm mb-4 flex-grow font-medium">By ${book.author}</p>
+            
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-gray-50">
+              <div class="flex items-center gap-2">
+                <span class="text-3xl font-black text-blue-900">₹${book.price}</span>
+                <span class="text-sm text-gray-400 line-through font-bold">₹${book.originalPrice}</span>
+              </div>
+            </div>
+            
+            <div class="mt-auto relative z-20">
+              <button onclick="toggleOptions('${prefix}', '${book.id}')" class="w-full flex items-center justify-center gap-2 px-4 py-4 rounded-xl text-white font-bold text-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-1" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
+                <i data-lucide="shopping-bag" style="width:20px;height:20px;"></i> View Buying Options
+              </button>
+              
+              <div id="options-${prefix}-${book.id}" class="buy-options-container">
+                <button onclick="navigateTo('book-details', {bookId: '${book.id}'})" class="format-btn flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gray-100 text-gray-800 font-bold transition w-full mt-2 hover:bg-gray-200">
+                  <i data-lucide="info" style="width:18px;height:18px;"></i> Full Book Details
+                </button>
+                ${book.formats.map(format => `
+                  <a href="${format.amazonUrl}" target="_blank" rel="noopener noreferrer" class="format-btn flex items-center justify-center gap-2 px-4 py-3 rounded-xl border-2 border-blue-600 text-blue-700 font-bold transition w-full" style="text-decoration: none;">
+                    <i data-lucide="${format.icon}" style="width:18px;height:18px;"></i> Buy ${format.type} Edition
+                  </a>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderStars(rating) {
+      const fullStars = Math.floor(rating);
+      const hasHalf = rating % 1 >= 0.5;
+      let html = '';
+      for (let i = 0; i < 5; i++) {
+        if (i < fullStars)html += '<i data-lucide="star" class="w-5 h-5 text-yellow-400 inline"></i>';
+        else if (i === fullStars && hasHalf) html += '<i data-lucide="star" class="w-5 h-5 text-yellow-400 text-yellow-300 inline"></i>';
+        else html += '<i data-lucide="star" class="w-5 h-5 text-gray-300 inline"></i>';
+      }
+      return html;
+    }
+
+    function renderBookDetails(bookId) {
+      const book = books.find(b => b.id === bookId);
+      if (!book) return;
+
+      document.getElementById('book-detail-breadcrumb').textContent = book.title;
+      const inWishlist = wishlist.includes(book.id);
+
+      document.getElementById('book-details-content').innerHTML = `
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-12 bg-white p-6 sm:p-10 rounded-3xl shadow-sm border border-gray-100">
+          <div class="space-y-4">
+            <div class="bg-slate-50 rounded-3xl p-8 flex items-center justify-center aspect-[3/4] sm:aspect-square border border-gray-100 shadow-inner relative">
+              <img src="${book.image}" class="max-w-full max-h-full object-contain drop-shadow-2xl" onerror="this.style.display='none'">
+              <button onclick="toggleWishlist('${book.id}')" class="absolute top-6 right-6 w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-xl transition-all hover:scale-110">
+                <i data-lucide="heart" class="w-7 h-7 ${inWishlist ? 'text-red-500 fill-red-500' : 'text-gray-400'}"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="flex flex-col justify-center">
+            <span class="text-xs text-blue-700 font-black tracking-widest uppercase bg-blue-50 border border-blue-100 px-4 py-2 rounded-full mb-6 w-fit shadow-sm">${book.category}</span>
+            <h1 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4 leading-tight">${book.title}</h1>
+            <p class="text-xl text-gray-600 mb-6">Authored by <span class="font-bold text-gray-800">${book.author}</span></p>
+            
+            <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-8">
+              <div class="flex items-center gap-1">${renderStars(book.rating)}</div>
+              <span class="font-bold text-gray-700 bg-gray-100 px-3 py-1 rounded-lg">${book.rating}</span>
+              <span class="text-gray-300">|</span>
+              <span class="text-gray-600 font-medium">${book.reviews} Verified Reviews</span>
+            </div>
+
+            <!-- VISIBLE PRICING BOX -->
+            <div class="flex items-center gap-5 mb-8 bg-blue-50/50 p-6 rounded-2xl border border-blue-50">
+              <span class="text-5xl font-black text-blue-900">₹${book.price}</span>
+              <div class="flex flex-col justify-center mt-1">
+                <span class="text-sm sm:text-base text-gray-400 line-through font-bold leading-none">₹${book.originalPrice}</span>
+                <span class="text-red-600 font-bold text-xs mt-1 leading-none">Save ₹${book.originalPrice - book.price}</span>
+              </div>
+              <div class="ml-auto">
+                <span class="bg-blue-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-black text-xs sm:text-sm shadow-sm tracking-widest">${book.discount}% OFF</span>
+              </div>
+            </div>
+
+            <div class="prose max-w-none text-gray-600 mb-10 leading-relaxed text-lg">
+              <p>${book.description}</p>
+            </div>
+
+            <h4 class="font-black text-gray-900 text-xl mb-4 uppercase tracking-wide">Buy Directly from Amazon</h4>
+            <div class="grid sm:grid-cols-2 gap-4">
+              ${book.formats.map(format => `
+                <a href="${format.amazonUrl}" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-6 bg-white border-2 border-gray-200 rounded-2xl hover:border-blue-600 hover:shadow-lg transition-all group shadow-sm" style="text-decoration: none;">
+                  <i data-lucide="${format.icon}" class="w-8 h-8 text-gray-400 group-hover:text-blue-600 mb-3 transition-colors"></i>
+                  <span class="font-black text-gray-900 text-lg">${format.type}</span>
+                  <span class="text-sm font-bold text-blue-600 mt-2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">Buy on Amazon <i data-lucide="external-link" class="w-3 h-3"></i></span>
+                </a>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    function renderReviews() {
+      const grid = document.getElementById('all-reviews-grid');
+      if (!grid) return;
+      
+      grid.innerHTML = reviews.map(r => `
+        <div class="bg-white rounded-3xl p-8 shadow-md border border-gray-100 hover:-translate-y-1 transition-transform">
+          <div class="flex items-center gap-1 mb-4">
+            ${renderStars(r.rating)}
+          </div>
+          <p class="text-gray-700 mb-6 text-lg leading-relaxed italic">"${r.review_text}"</p>
+          <div class="flex items-center gap-4 pt-4 border-t border-gray-50">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-inner">
+              <span class="text-white font-bold text-lg">${r.reviewer_name.charAt(0)}</span>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900 text-lg">${r.reviewer_name}</p>
+              <p class="text-green-600 text-sm font-semibold flex items-center gap-1"><i data-lucide="check-circle" class="w-3 h-3"></i> Verified Student</p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+      
+    }
+
+    function renderOffers() {
+      const grid = document.getElementById('offers-grid');
+      if (!grid) return;
+      
+      grid.innerHTML = offers.map(offer => `
+        <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col h-full transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-8 text-white relative overflow-hidden">
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+            <span class="inline-block bg-yellow-400 text-yellow-900 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-4 shadow-sm">${offer.tag}</span>
+            <h3 class="text-2xl font-black mb-3 leading-tight">${offer.title}</h3>
+            <p class="text-blue-100">${offer.description}</p>
+          </div>
+          <div class="p-8 flex flex-col flex-grow bg-slate-50">
+            <div class="flex items-center gap-4 mb-8 bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+              <span class="text-4xl font-black text-blue-900">₹${offer.discountPrice}</span>
+              <div class="flex flex-col">
+                <span class="text-gray-400 line-through text-lg font-bold">₹${offer.originalPrice}</span>
+              </div>
+              <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-black shadow-md ml-auto tracking-widest">${offer.discount}% OFF</span>
+            </div>
+            <div class="mt-auto">
+              <a href="${offer.amazonUrl}" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all text-lg">
+                <i data-lucide="external-link" class="w-6 h-6"></i> Get Deal on Amazon
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function renderWishlist() {
+      const container = document.getElementById('wishlist-content');
+      if (wishlist.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full text-center py-20 bg-white rounded-3xl border border-gray-100 shadow-sm">
+            <div class="w-24 h-24 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6 text-red-300">
+              <i data-lucide="heart" class="w-12 h-12"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Your wishlist is empty</h2>
+            <p class="text-gray-500 mb-8 text-lg">Browse our collection and save the books you need for later.</p>
+            <button onclick="navigateTo('books')" class="bg-blue-900 text-white px-10 py-4 rounded-xl font-bold shadow-lg hover:-translate-y-1 transition-transform text-lg">Browse Books</button>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+      const wishlistBooks = wishlist.map(id => books.find(b => b.id === id)).filter(Boolean);
+      container.innerHTML = wishlistBooks.map(book => createBookCard(book, 'wish')).join('');
+      lucide.createIcons();
+    }
+
+   // ================= LOGIC & UTILS =================
+
+/**
+ * ⭐ BULLETPROOF RATING FUNCTION
+ * Handles the Lucide SVG replacement and forces the color/fill.
+ */
+function setRating(r) {
+  currentRating = r;
+  const ratingInput = document.getElementById('rating-value');
+  if (ratingInput) ratingInput.value = r;
+
+  const container = document.getElementById('star-rating-input');
+  if (!container) return;
+
+  // We look for i, svg, and path to ensure everything gets colored
+  const stars = container.querySelectorAll('i, svg');
+
+  stars.forEach((star, idx) => {
+    if (idx < r) {
+      // Active State
+      star.classList.add('text-yellow-400', 'fill-current');
+      star.classList.remove('text-gray-300');
+      star.style.fill = "#facd13"; // Force yellow hex
+      star.style.color = "#facd13";
+    } else {
+      // Inactive State
+      star.classList.remove('text-yellow-400', 'fill-current');
+      star.classList.add('text-gray-300');
+      star.style.fill = "none";
+      star.style.color = "#d1d5db"; // Gray-300 hex
+    }
+  });
+}
+
+function submitReview(e) {
+  e.preventDefault();
+
+  const nameInput = document.getElementById('reviewer-name');
+  const textInput = document.getElementById('review-text');
+
+  if (currentRating === 0) return showToast('Please select a star rating!', 'error');
+  if (!nameInput.value.trim() || !textInput.value.trim()) return showToast('Please fill in all fields!', 'error');
+
+  const newReview = {
+    reviewer_name: nameInput.value.trim(),
+    rating: currentRating,
+    review_text: textInput.value.trim(),
+    date: new Date().toLocaleDateString(),
+    verified: true
+  };
+
+  // Add to local data
+  reviews.unshift(newReview);
+  const localReviews = JSON.parse(localStorage.getItem('pg26_reviews') || '[]');
+  localReviews.unshift(newReview);
+  localStorage.setItem('pg26_reviews', JSON.stringify(localReviews));
+
+  // Reset UI
+  e.target.reset();
+  currentRating = 0; 
+  setRating(0); // Reset stars to gray
+  renderReviews();
+  showToast('Review submitted successfully!', 'success');
+}
+
+function toggleWishlist(bookId) {
+  if (window.event) window.event.stopPropagation();
+
+  const index = wishlist.indexOf(bookId);
+  if (index > -1) {
+    wishlist.splice(index, 1);
+    showToast('Removed from wishlist', 'info');
+  } else {
+    wishlist.push(bookId);
+    showToast('Added to wishlist!', 'success');
+  }
+
+  if (typeof saveLocalData === 'function') saveLocalData();
+  updateWishlistUI();
+
+  // Refresh current page view
+  const pages = ['home', 'books', 'wishlist', 'book-details'];
+  const activePage = pages.find(id => {
+    const el = document.getElementById(`page-${id}`);
+    return el && !el.classList.contains('hidden');
+  });
+
+  if (activePage === 'home') renderFeaturedBooks();
+  else if (activePage === 'books') renderAllBooks();
+  else if (activePage === 'wishlist') renderWishlist();
+  else if (activePage === 'book-details' && typeof currentBookId !== 'undefined' && currentBookId === bookId) {
+    renderBookDetails(bookId);
+  }
+}
+
+function updateWishlistUI() {
+  const countEl = document.getElementById('wishlist-count');
+  if (!countEl) return;
+  if (wishlist.length > 0) {
+    countEl.textContent = wishlist.length;
+    countEl.classList.remove('hidden');
+  } else {
+    countEl.classList.add('hidden');
+  }
+}
+
+function showToast(msg, type = 'info') {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+
+  const toast = document.createElement('div');
+  const bg = type === 'success' ? 'bg-green-600' : type === 'error' ? 'bg-red-600' : 'bg-blue-900';
+  const icon = type === 'success' ? 'check-circle' : type === 'error' ? 'x-circle' : 'info';
+
+  toast.className = `toast px-6 py-4 rounded-2xl shadow-2xl text-white font-bold mb-3 flex items-center gap-3 transition-all duration-300 opacity-0 translate-y-4 ${bg}`;
+  toast.innerHTML = `<i data-lucide="${icon}" class="w-6 h-6"></i> <span>${msg}</span>`;
+
+  container.appendChild(toast);
+  if (window.lucide) lucide.createIcons();
+
+  setTimeout(() => toast.classList.remove('opacity-0', 'translate-y-4'), 10);
+  setTimeout(() => {
+    toast.classList.add('opacity-0', 'translate-y-2');
+    setTimeout(() => toast.remove(), 300);
+  }, 3500);
+}
+  </script>
+</body>
+</html>
