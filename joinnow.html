@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./favicon.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma & Research Guidance Request</title>
+    <style>
+        /* CSS STYLES - Premium Pharma Theme */
+        :root {
+            --primary-blue: #0b4f6c;
+            --accent-teal: #01b0d3;
+            --bg-color: #f0f4f8;
+            --text-dark: #2b3a42;
+            --text-light: #6e7c87;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at top right, #e0ebf5, transparent);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-dark);
+        }
+
+        .container {
+            background-color: var(--white);
+            padding: 40px 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(11, 79, 108, 0.08);
+            width: 100%;
+            max-width: 550px;
+            border-top: 5px solid var(--accent-teal);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background-color: #e6f7fa;
+            color: var(--accent-teal);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px auto;
+            font-size: 28px;
+        }
+
+        header h1 {
+            color: var(--primary-blue);
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #d1d9e0;
+            border-radius: 8px;
+            font-size: 15px;
+            color: var(--text-dark);
+            background-color: #fbfcfd;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            background-color: var(--white);
+            box-shadow: 0 0 0 4px rgba(1, 176, 211, 0.1);
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b4f6c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            width: 100%;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(11, 79, 108, 0.2);
+        }
+
+        button:hover {
+            background-color: #083b52;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(11, 79, 108, 0.3);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Styles for your custom success message */
+        #success-message {
+            display: none; /* Hidden by default */
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        #success-message h2 {
+            color: #155724;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        #success-message p {
+            color: var(--text-dark);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            background-color: #e6f7fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-teal);
+        }
+
+        .pdf-note {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- The Success Message (Hidden initially) -->
+        <div id="success-message">
+            <div class="icon-wrapper" style="background-color: #d4edda; color: #155724;">
+                ✅
+            </div>
+            <h2>Request Submitted Successfully!</h2>
+            <p>Within 24 hours, our team will contact you and answer your queries.</p>
+            <p><strong>Note:</strong> Guidance charges will be collected. You will receive a PDF document via email shortly. Please fill out those details and get back to us to proceed.</p>
+        </div>
+
+        <!-- The Form -->
+        <div id="form-container">
+            <header>
+                <div class="icon-wrapper">⚕️</div>
+                <h1>Academic & Research Guidance</h1>
+                <p>Connect for peer guidance on research articles, thesis formatting, or the publishing process.</p>
+            </header>
+            
+            <form id="guidance-form" name="pharma-guidance" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                
+                <input type="hidden" name="form-name" value="pharma-guidance" />
+                
+                <p class="hidden">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guidanceTopic">What area do you need help with?</label>
+                    <select id="guidanceTopic" name="guidanceTopic" required>
+                        <option value="" disabled selected>Select a research topic...</option>
+                        <option value="review-article">Review Article (Structure & Doubts)</option>
+                        <option value="thesis-doubts">Final Year Thesis Guidance</option>
+                        <option value="research-sites">Best Sites & Literature Search Process</option>
+                        <option value="book-publishing">Academic Book Publishing Steps</option>
+                        <option value="gpat-niper">GPAT / NIPER Exam Prep</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Specific Details or Doubts</label>
+                    <textarea id="details" name="details" placeholder="Briefly describe the exact doubt or obstacle you are facing..." required></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn">Submit Request</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        // Intercept the form submission to show the custom message without leaving the page
+        const form = document.getElementById("guidance-form");
+        
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Stop the default Netlify redirect
+            
+            const submitBtn = document.getElementById("submitBtn");
+            submitBtn.textContent = "Sending...";
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            // Send the data to Netlify in the background
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+                // Hide the form container
+                document.getElementById("form-container").style.display = "none";
+                // Show your custom success message
+                document.getElementById("success-message").style.display = "block";
+            })
+            .catch((error) => {
+                alert("There was an error submitting the form. Please try again.");
+                submitBtn.textContent = "Submit Request";
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+
+</body>
+</html>
