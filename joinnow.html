@@ -1,283 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./favicon.png">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharma & Research Guidance Request</title>
-    <style>
-        /* CSS STYLES - Premium Pharma Theme */
-        :root {
-            --primary-blue: #0b4f6c;
-            --accent-teal: #01b0d3;
-            --bg-color: #f0f4f8;
-            --text-dark: #2b3a42;
-            --text-light: #6e7c87;
-            --white: #ffffff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PharmacyGuides26</title>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-        body {
-            background-color: var(--bg-color);
-            background-image: radial-gradient(circle at top right, #e0ebf5, transparent);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            color: var(--text-dark);
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        .container {
-            background-color: var(--white);
-            padding: 40px 50px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(11, 79, 108, 0.08);
-            width: 100%;
-            max-width: 550px;
-            border-top: 5px solid var(--accent-teal);
-        }
+body{
+font-family:'DM Sans',sans-serif;
+background:linear-gradient(135deg,#eef7ff,#f8fbff);
+padding:40px 20px;
+}
 
-        header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
+.container{
+max-width:1200px;
+margin:auto;
+}
 
-        .icon-wrapper {
-            width: 60px;
-            height: 60px;
-            background-color: #e6f7fa;
-            color: var(--accent-teal);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 15px auto;
-            font-size: 28px;
-        }
+.font-display{
+font-family:'Playfair Display',serif;
+}
 
-        header h1 {
-            color: var(--primary-blue);
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-        }
+.logo-ring{
+width:100px;
+height:100px;
+margin:auto;
+background:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 8px 30px rgba(59,130,246,.15);
+margin-bottom:25px;
+}
 
-        header p {
-            color: var(--text-light);
-            font-size: 15px;
-            line-height: 1.5;
-        }
+.logo-ring img{
+width:70px;
+height:70px;
+object-fit:contain;
+}
 
-        .form-group {
-            margin-bottom: 24px;
-        }
+h1{
+text-align:center;
+font-size:42px;
+font-weight:700;
+color:#0f172a;
+}
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--primary-blue);
-            font-weight: 600;
-            font-size: 14px;
-        }
+.subtitle{
+text-align:center;
+margin-top:15px;
+font-size:18px;
+color:#64748b;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
 
-        input[type="text"],
-        input[type="email"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 14px 16px;
-            border: 1px solid #d1d9e0;
-            border-radius: 8px;
-            font-size: 15px;
-            color: var(--text-dark);
-            background-color: #fbfcfd;
-            transition: all 0.3s ease;
-        }
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:50px;
+}
 
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: none;
-            border-color: var(--accent-teal);
-            background-color: var(--white);
-            box-shadow: 0 0 0 4px rgba(1, 176, 211, 0.1);
-        }
+.benefit-card{
+background:white;
+padding:30px;
+border-radius:25px;
+text-align:center;
+transition:.4s;
+box-shadow:0 8px 20px rgba(0,0,0,0.04);
+}
 
-        select {
-            cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b4f6c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            background-size: 16px;
-            padding-right: 40px;
-        }
+.benefit-card:hover{
+transform:translateY(-8px);
+}
 
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
+.icon-box{
+width:65px;
+height:65px;
+margin:auto;
+margin-bottom:20px;
+border-radius:18px;
+background:#dbeafe;
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
-        button {
-            width: 100%;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 16px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(11, 79, 108, 0.2);
-        }
+h3{
+font-size:24px;
+margin-bottom:10px;
+}
 
-        button:hover {
-            background-color: #083b52;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(11, 79, 108, 0.3);
-        }
+.card-p{
+color:#64748b;
+font-size:15px;
+}
 
-        .hidden {
-            display: none;
-        }
+.form-box{
+background:#fff;
+padding:40px;
+margin-top:60px;
+border-radius:30px;
+box-shadow:0 8px 30px rgba(0,0,0,0.06);
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+}
 
-        /* Styles for your custom success message */
-        #success-message {
-            display: none; /* Hidden by default */
-            text-align: center;
-            padding: 20px 10px;
-        }
+.form-box h2{
+text-align:center;
+font-size:32px;
+margin-bottom:30px;
+}
 
-        #success-message h2 {
-            color: #155724;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
+input,select,textarea{
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:1px solid #cbd5e1;
+border-radius:15px;
+font-size:16px;
+}
 
-        #success-message p {
-            color: var(--text-dark);
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            background-color: #e6f7fa;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-teal);
-        }
+button{
+width:100%;
+padding:16px;
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+border:none;
+border-radius:15px;
+color:white;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+}
+</style>
 
-        .pdf-note {
-            font-weight: 600;
-            color: var(--primary-blue);
-        }
-    </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <!-- The Success Message (Hidden initially) -->
-        <div id="success-message">
-            <div class="icon-wrapper" style="background-color: #d4edda; color: #155724;">
-                ✅
-            </div>
-            <h2>Request Submitted Successfully!</h2>
-            <p>Within 24 hours, our team will contact you and answer your queries.</p>
-            <p><strong>Note:</strong> Guidance charges will be collected. You will receive a PDF document via email shortly. Please fill out those details and get back to us to proceed.</p>
-        </div>
+<div class="container">
 
-        <!-- The Form -->
-        <div id="form-container">
-            <header>
-                <div class="icon-wrapper">⚕️</div>
-                <h1>Academic & Research Guidance</h1>
-                <p>Connect for peer guidance on research articles, thesis formatting, or the publishing process.</p>
-            </header>
-            
-            <form id="guidance-form" name="pharma-guidance" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                
-                <input type="hidden" name="form-name" value="pharma-guidance" />
-                
-                <p class="hidden">
-                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                </p>
+<div class="logo-ring">
+<img src="./favicon.ico" alt="Logo">
+</div>
 
-                <div class="form-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
-                </div>
+<h1 class="font-display">Need Academic & Publishing Guidance?</h1>
 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                </div>
+<p class="subtitle">
+Get personalized support for article publishing, research writing, thesis assistance, and book publishing guidance.
+</p>
 
-                <div class="form-group">
-                    <label for="guidanceTopic">What area do you need help with?</label>
-                    <select id="guidanceTopic" name="guidanceTopic" required>
-                        <option value="" disabled selected>Select a research topic...</option>
-                        <option value="review-article">Review Article (Structure & Doubts)</option>
-                        <option value="thesis-doubts">Final Year Thesis Guidance</option>
-                        <option value="research-sites">Best Sites & Literature Search Process</option>
-                        <option value="book-publishing">Academic Book Publishing Steps</option>
-                        <option value="gpat-niper">GPAT / NIPER Exam Prep</option>
-                        <option value="other">Other Inquiry</option>
-                    </select>
-                </div>
+<div class="cards">
 
-                <div class="form-group">
-                    <label for="details">Specific Details or Doubts</label>
-                    <textarea id="details" name="details" placeholder="Briefly describe the exact doubt or obstacle you are facing..." required></textarea>
-                </div>
+<div class="benefit-card">
+<div class="icon-box">
+<svg width="32" height="32" fill="none" stroke="#2563eb" stroke-width="2.5" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"/>
+<polygon points="16 8 14 14 8 16 10 10 16 8"/>
+</svg>
+</div>
+<h3>Personalized Guidance</h3>
+<p class="card-p">Tailored to your research needs</p>
+</div>
 
-                <button type="submit" id="submitBtn">Submit Request</button>
-            </form>
-        </div>
+<div class="benefit-card">
+<div class="icon-box">
+<svg width="32" height="32" fill="none" stroke="#06b6d4" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M9 11l3 3L22 4"/>
+<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+</svg>
+</div>
+<h3>Step-by-Step Support</h3>
+<p class="card-p">Clear roadmap from start to finish</p>
+</div>
 
-    </div>
+<div class="benefit-card">
+<div class="icon-box">
+<svg width="32" height="32" fill="none" stroke="#2563eb" stroke-width="2.5" viewBox="0 0 24 24">
+<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+</svg>
+</div>
+<h3>Fast Response</h3>
+<p class="card-p">Within 24 Hours</p>
+</div>
 
-    <script>
-        // Intercept the form submission to show the custom message without leaving the page
-        const form = document.getElementById("guidance-form");
-        
-        form.addEventListener("submit", function(event) {
-            event.preventDefault(); // Stop the default Netlify redirect
-            
-            const submitBtn = document.getElementById("submitBtn");
-            submitBtn.textContent = "Sending...";
-            submitBtn.disabled = true;
+<div class="benefit-card">
+<div class="icon-box">
+<svg width="32" height="32" fill="none" stroke="#06b6d4" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+</svg>
+</div>
+<h3>Beginner Friendly</h3>
+<p class="card-p">No prior experience needed</p>
+</div>
 
-            const formData = new FormData(form);
+</div>
 
-            // Send the data to Netlify in the background
-            fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString(),
-            })
-            .then(() => {
-                // Hide the form container
-                document.getElementById("form-container").style.display = "none";
-                // Show your custom success message
-                document.getElementById("success-message").style.display = "block";
-            })
-            .catch((error) => {
-                alert("There was an error submitting the form. Please try again.");
-                submitBtn.textContent = "Submit Request";
-                submitBtn.disabled = false;
-            });
-        });
-    </script>
+<div class="form-box">
+
+<h2 class="font-display">Request Your Guidance Consultation</h2>
+
+<form 
+name="guidance-form"
+method="POST"
+data-netlify="true"
+id="guidanceForm">
+
+<input type="hidden" name="form-name" value="guidance-form">
+
+<input type="text" name="fullname" placeholder="Full Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="tel" name="phone" placeholder="Phone Number (Optional)">
+
+<input type="text" name="college" placeholder="Pharmacy College / Institution" required>
+
+<select name="guidance" required>
+<option value="">Select Guidance Type</option>
+<option>Article Publishing Guidance</option>
+<option>Research Paper Support</option>
+<option>Thesis Help</option>
+<option>Book Publishing</option>
+</select>
+
+<textarea name="message" rows="4" placeholder="Describe your doubt..."></textarea>
+
+<button type="submit">Request Guidance Now</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- SUCCESS POPUP -->
+<div id="successPopup" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+justify-content:center;
+align-items:center;
+z-index:999;
+">
+
+<div style="
+background:white;
+padding:30px;
+border-radius:20px;
+max-width:420px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+">
+
+<h2 style="color:#2563eb;margin-bottom:15px;">
+✅ Submission Sent!
+</h2>
+
+<p style="color:#475569;line-height:1.6;">
+Your submission has been sent to <b>PharmacyGuides26</b>.<br>
+Our team will reply within <b>24 hours or 2 days</b>.
+</p>
+
+<button onclick="closePopup()" style="
+margin-top:20px;
+background:#2563eb;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+cursor:pointer;
+">
+OK
+</button>
+
+</div>
+
+</div>
+
+<script>
+document.getElementById("guidanceForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+let form = this;
+let formData = new FormData(form);
+
+fetch("/", {
+method: "POST",
+headers: { "Content-Type": "application/x-www-form-urlencoded" },
+body: new URLSearchParams(formData).toString()
+})
+.then(() => {
+document.getElementById("successPopup").style.display = "flex";
+form.reset();
+})
+.catch((error) => {
+alert("Submission failed. Please try again.");
+});
+
+});
+
+function closePopup(){
+document.getElementById("successPopup").style.display="none";
+}
+</script>
 
 </body>
 </html>
