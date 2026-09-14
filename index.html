@@ -161,6 +161,157 @@
   stroke: #facc15;
 }
     
+
+/* ================= FESTIVAL AUTO GREETING ================= */
+#festival-banner {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #7c3aed 100%);
+  color: #fff;
+}
+#festival-banner .festival-banner-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 48px 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+#festival-banner .festival-banner-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+#festival-banner .festival-banner-image {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,.7);
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  flex: 0 0 auto;
+}
+#festival-banner .festival-close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 0;
+  background: rgba(255,255,255,.12);
+  color: white;
+  cursor: pointer;
+}
+#festival-banner .festival-close:hover { background: rgba(255,255,255,.22); }
+
+#festival-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(15, 23, 42, .72);
+  backdrop-filter: blur(5px);
+  padding: 18px;
+  align-items: center;
+  justify-content: center;
+}
+#festival-modal.show { display: flex; }
+#festival-modal .festival-card {
+  width: min(440px, 94vw);
+  max-height: 92vh;
+  overflow: auto;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.28);
+  position: relative;
+  animation: festivalPop .35s ease-out;
+}
+@keyframes festivalPop {
+  from { opacity: 0; transform: translateY(18px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+#festival-modal .festival-card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: transparent;
+}
+#festival-modal .festival-content {
+  padding: 14px 18px 16px;
+  text-align: center;
+}
+#festival-modal .festival-close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 12px;
+  background: rgba(15,23,42,.72);
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+#festival-modal .festival-close:hover { background: rgba(15,23,42,.9); }
+#festival-modal .festival-kicker {
+  color: #2563eb;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 12px;
+}
+#festival-modal .festival-title {
+  font-family: Georgia, serif;
+  font-size: clamp(24px, 5vw, 34px);
+  line-height: 1.1;
+  font-weight: 800;
+  color: #111827;
+  margin: 5px 0 7px;
+}
+#festival-modal .festival-message {
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 0 auto;
+  max-width: 420px;
+}
+@media (max-width: 640px) {
+  #festival-banner .festival-banner-inner { padding: 12px 46px 12px 12px; }
+  #festival-banner .festival-banner-image { width: 48px; height: 48px; }
+  #festival-modal { padding: 8px; }
+  #festival-modal .festival-card {
+    width: min(420px, 96vw);
+    max-height: 94vh;
+    border-radius: 20px;
+  }
+  #festival-modal .festival-card-image {
+    aspect-ratio: 1 / 1;
+  }
+  #festival-modal .festival-content {
+    padding: 12px 14px 14px;
+  }
+  #festival-modal .festival-kicker { font-size: 10px; }
+  #festival-modal .festival-message {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  #festival-modal .festival-content button {
+    margin-top: 12px !important;
+    padding: 10px 16px !important;
+  }
+}
+
   </style>
 </head>
 <body class="h-full font-body" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);">
@@ -192,6 +343,41 @@
 
     <!-- Toast Container -->
     <div id="toast-container" class="fixed top-24 right-4 z-50 flex flex-col gap-2"></div>
+
+    <!-- ================= FESTIVAL AUTO GREETING ================= -->
+    <section id="festival-banner" aria-label="Festival greeting">
+      <div class="festival-banner-inner">
+        <div class="festival-banner-icon">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
+        </div>
+        <img id="festival-banner-image" class="festival-banner-image" alt="" />
+        <div class="min-w-0">
+          <div id="festival-banner-title" class="font-extrabold text-base sm:text-lg"></div>
+          <div id="festival-banner-message" class="text-white/90 text-sm sm:text-base truncate"></div>
+        </div>
+      </div>
+      <button class="festival-close" type="button" onclick="closeFestivalBanner()" aria-label="Close festival greeting">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </section>
+
+    <div id="festival-modal" role="dialog" aria-modal="true" aria-labelledby="festival-modal-title">
+      <div class="festival-card">
+        <button class="festival-close" type="button" onclick="closeFestivalModal()" aria-label="Close festival greeting">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+        <img id="festival-modal-image" class="festival-card-image" alt="" />
+        <div class="festival-content">
+          <div class="festival-kicker">PharmacyGuides26 Wishes You</div>
+          <h2 id="festival-modal-title" class="festival-title"></h2>
+          <p id="festival-modal-message" class="festival-message"></p>
+          <button type="button" onclick="closeFestivalModal()" class="mt-6 px-6 py-3 rounded-xl bg-blue-900 text-white font-bold hover:bg-blue-800 transition-colors">
+            Continue to PharmacyGuides26
+          </button>
+        </div>
+      </div>
+    </div>
+
     
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden" onclick="toggleMobileMenu(true)"></div>
@@ -636,6 +822,146 @@ discount: 85,
 ];
 
     // ================= INITIALIZATION =================
+    
+    // ================= FESTIVAL AUTO GREETING =================
+    // Upload your own festival images into your Netlify project.
+    // Then change only the "image" filename below.
+    //
+    // Example project structure:
+    // /index.html
+    // /festival-images/ganesh-chaturthi.jpg
+    // /festival-images/diwali.jpg
+    //
+    // Dates below are examples for 2026. For festivals whose dates change
+    // every year, add/update the date for the new year in this list.
+
+    const FESTIVAL_CONFIG = [
+      {
+        name: "Ganesh Chaturthi",
+        date: "2026-09-14",
+        image: "festival-images/ganesh-chaturthi.jpg",
+        message: "May Lord Ganesha bless you with wisdom, happiness, success and new beginnings. Happy Ganesh Chaturthi!"
+      },
+      {
+        name: "Dussehra",
+        date: "2026-10-20",
+        image: "festival-images/dussehra.jpg",
+        message: "Wishing you a joyful Dussehra filled with positivity, courage and success. Happy Dussehra!"
+      },
+      {
+        name: "Diwali",
+        date: "2026-11-08",
+        image: "festival-images/diwali.jpg",
+        message: "May this Diwali bring light, happiness, prosperity and success to you and your family. Happy Diwali!"
+      },
+      {
+        name: "Christmas",
+        date: "2026-12-25",
+        image: "festival-images/christmas.jpg",
+        message: "Wishing you a joyful Christmas filled with peace, happiness and beautiful moments. Merry Christmas!"
+      },
+      {
+        name: "New Year",
+        date: "2027-01-01",
+        image: "festival-images/new-year.jpg",
+        message: "Wishing you a wonderful New Year filled with learning, success, happiness and new opportunities!"
+      }
+    ];
+
+    function getTodayLocalISO() {
+      const now = new Date();
+      const y = now.getFullYear();
+      const m = String(now.getMonth() + 1).padStart(2, "0");
+      const d = String(now.getDate()).padStart(2, "0");
+      return `${y}-${m}-${d}`;
+    }
+
+    function getTodayFestival() {
+      const today = getTodayLocalISO();
+      return FESTIVAL_CONFIG.find(festival => festival.date === today) || null;
+    }
+
+    function openFestivalModal(festival) {
+      const modal = document.getElementById("festival-modal");
+      const image = document.getElementById("festival-modal-image");
+      const title = document.getElementById("festival-modal-title");
+      const message = document.getElementById("festival-modal-message");
+      if (!modal || !image || !title || !message) return;
+
+      image.src = festival.image;
+      image.alt = festival.name;
+      title.textContent = festival.name;
+      message.textContent = festival.message;
+      modal.classList.add("show");
+      document.body.style.overflow = "hidden";
+
+      image.onerror = () => {
+        image.style.display = "none";
+      };
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeFestivalModal() {
+      const modal = document.getElementById("festival-modal");
+      if (modal) modal.classList.remove("show");
+      document.body.style.overflow = "";
+      sessionStorage.setItem("pg26_festival_modal_closed", "1");
+    }
+
+    function showFestivalBanner(festival) {
+      const banner = document.getElementById("festival-banner");
+      const image = document.getElementById("festival-banner-image");
+      const title = document.getElementById("festival-banner-title");
+      const message = document.getElementById("festival-banner-message");
+      if (!banner || !image || !title || !message) return;
+
+      image.src = festival.image;
+      image.alt = festival.name;
+      title.textContent = `🎉 ${festival.name}`;
+      message.textContent = festival.message;
+      banner.style.display = "block";
+
+      image.onerror = () => {
+        image.style.display = "none";
+      };
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeFestivalBanner() {
+      const banner = document.getElementById("festival-banner");
+      if (banner) banner.style.display = "none";
+      sessionStorage.setItem("pg26_festival_banner_closed", "1");
+    }
+
+    function initFestivalGreeting() {
+      const festival = getTodayFestival();
+      if (!festival) return;
+
+      // Banner appears on the homepage.
+      if (sessionStorage.getItem("pg26_festival_banner_closed") !== "1") {
+        showFestivalBanner(festival);
+      }
+
+      // Popup appears once per browser session.
+      if (sessionStorage.getItem("pg26_festival_modal_closed") !== "1") {
+        setTimeout(() => openFestivalModal(festival), 700);
+      }
+    }
+
+    // Close popup when clicking outside the card.
+    document.addEventListener("click", (event) => {
+      const modal = document.getElementById("festival-modal");
+      if (event.target === modal) closeFestivalModal();
+    });
+
+    // Allow Escape to close the popup.
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeFestivalModal();
+    });
+
+
     window.onload = () => {
       loadLocalData();
       renderFeaturedBooks();
@@ -644,6 +970,7 @@ discount: 85,
       renderReviews();
       updateWishlistUI();
       lucide.createIcons();
+      initFestivalGreeting();
     };
 
     function loadLocalData() {
