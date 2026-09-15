@@ -353,28 +353,52 @@
 }
 
   
-/* ================= MODERN AUTHORS PAGE ================= */
+/* ================= PREMIUM AUTHORS PAGE ================= */
 .author-page{position:relative}
-.author-hero{text-align:center;max-width:900px;margin:0 auto 35px}
-.author-kicker{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid #dbe4ff;border-radius:999px;background:#f8faff;color:#3158cf;font:800 10px 'Outfit',sans-serif;letter-spacing:1.7px}
-.author-hero h1{margin:16px 0 12px;font-size:clamp(44px,7vw,76px);letter-spacing:-3px;line-height:.98}
-.author-intro{max-width:650px;margin:auto;color:#64748b;font-size:15px;line-height:1.8}
-.author-quote{position:relative;max-width:760px;margin:25px auto 0;padding:18px 35px;border-top:1px dashed #cbd5e1;border-bottom:1px dashed #cbd5e1}
-.author-quote p{color:#334155;font-size:16px;font-weight:700;line-height:1.6}
-.quote-mark{position:absolute;left:0;top:2px;font:700 50px Georgia;color:#dbeafe}
+.author-hero{text-align:center;max-width:980px;margin:0 auto 42px}
+.author-kicker{
+  display:inline-flex;gap:9px;align-items:center;padding:8px 15px;
+  border:1px solid #c7d7fe;border-radius:999px;background:rgba(255,255,255,.82);
+  color:#3158cf;font:800 10px 'Outfit',sans-serif;letter-spacing:2px;
+  box-shadow:0 8px 24px rgba(37,99,235,.08)
+}
+.author-hero h1{
+  margin:17px 0 13px;font-size:clamp(44px,7vw,78px);letter-spacing:-3.5px;
+  line-height:.96;background:linear-gradient(100deg,#0f172a,#1d4ed8 52%,#7c3aed);
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.author-intro{max-width:700px;margin:auto;color:#64748b;font-size:15px;line-height:1.85}
+.author-quote{
+  position:relative;max-width:790px;margin:27px auto 0;padding:20px 42px;
+  border:1px solid #dbe5f5;border-radius:20px;background:rgba(255,255,255,.7);
+  box-shadow:0 12px 35px rgba(15,23,42,.05)
+}
+.author-quote p{color:#334155;font-size:16px;font-weight:700;line-height:1.65;margin:0}
+.quote-mark{position:absolute;left:14px;top:3px;font:700 50px Georgia;color:#bfdbfe}
 
-/* doodle stage */
+/* premium illustration stage */
 .doodle-stage{
- position:relative;min-height:520px;margin:35px auto 70px;overflow:hidden;border-radius:34px;
- background:linear-gradient(135deg,#eef5ff 0%,#faf7ff 52%,#effdf8 100%);
- border:1px solid #dce5f3;box-shadow:0 25px 70px rgba(30,64,175,.10);
+ position:relative;min-height:500px;margin:35px auto 68px;overflow:hidden;border-radius:36px;
+ background:
+   radial-gradient(circle at 20% 20%,rgba(96,165,250,.18),transparent 30%),
+   radial-gradient(circle at 82% 28%,rgba(168,85,247,.15),transparent 28%),
+   linear-gradient(135deg,#eef6ff 0%,#fbf9ff 52%,#effcf7 100%);
+ border:1px solid #d7e3f4;box-shadow:0 28px 75px rgba(30,64,175,.12);
  display:flex;align-items:center;justify-content:center
 }
-.doodle-grid{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(#b7c8e6 1px,transparent 1px),linear-gradient(90deg,#b7c8e6 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent)}
-.doodle-stage:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:rgba(255,255,255,.75);border:1px dashed #a8bce2;box-shadow:0 0 0 24px rgba(255,255,255,.24),0 0 0 25px #d9e3f3}
+.doodle-grid{position:absolute;inset:0;opacity:.32;background-image:linear-gradient(#a8bce2 1px,transparent 1px),linear-gradient(90deg,#a8bce2 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent)}
+.doodle-stage:before{
+ content:"";position:absolute;width:330px;height:330px;border-radius:50%;
+ background:rgba(255,255,255,.78);border:1px dashed #a8bce2;
+ box-shadow:0 0 0 24px rgba(255,255,255,.25),0 0 0 25px #d9e3f3,0 25px 70px rgba(37,99,235,.12)
+}
 .doodle-spark{position:absolute;font-weight:900;color:#4771dc;animation:doodleFloat 3s ease-in-out infinite}
 .spark-a{top:65px;left:22%;font-size:26px}.spark-b{top:145px;right:21%;font-size:32px;animation-delay:.6s}.spark-c{bottom:110px;left:26%;font-size:25px;animation-delay:1.1s}
-.doodle-note{position:absolute;padding:10px 12px;background:#fff;border:1px solid #dbe3ef;box-shadow:4px 5px 0 #c9d5e8;color:#59657a;font:800 9px/1.5 'Outfit',sans-serif;letter-spacing:1.2px;text-align:center}
+.doodle-note{
+ position:absolute;padding:11px 14px;background:rgba(255,255,255,.92);border:1px solid #dbe3ef;
+ box-shadow:5px 6px 0 #c9d5e8;color:#59657a;font:800 9px/1.5 'Outfit',sans-serif;
+ letter-spacing:1.2px;text-align:center;border-radius:10px
+}
 .note-left{left:7%;top:28%;transform:rotate(-5deg)}.note-right{right:7%;top:30%;transform:rotate(5deg)}
 .anime-person{position:relative;width:245px;height:395px;z-index:3;animation:personFloat 4s ease-in-out infinite}
 .anime-hair-back{position:absolute;width:150px;height:155px;left:47px;top:17px;background:#172554;border-radius:50% 48% 42% 50%;transform:rotate(-7deg);box-shadow:12px 10px 0 rgba(37,99,235,.12)}
@@ -396,22 +420,37 @@
 .coat-pocket{position:absolute;right:15px;top:102px;color:#2563eb;font-size:13px}
 .anime-arm{position:absolute;z-index:1;width:48px;height:145px;background:#fff;border:3px solid #172554;border-radius:30px}
 .arm-left{left:23px;top:206px;transform:rotate(22deg)}.arm-right{right:23px;top:205px;transform:rotate(-24deg)}
-.anime-hand{position:absolute;z-index:4;font-size:25px}
-.hand-left{left:3px;top:315px;transform:rotate(-15deg)}.hand-right{right:2px;top:310px;transform:rotate(13deg)}
+.anime-hand{position:absolute;z-index:4;font-size:25px}.hand-left{left:3px;top:315px;transform:rotate(-15deg)}.hand-right{right:2px;top:310px;transform:rotate(13deg)}
 .doodle-caption{position:absolute;bottom:27px;display:flex;flex-direction:column;align-items:center;gap:3px;color:#475569;font-size:10px;letter-spacing:2px}
 .doodle-caption strong{font-size:13px;color:#172554}.doodle-caption span{font-weight:700;color:#94a3b8}
 @keyframes personFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
 @keyframes doodleFloat{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-9px) rotate(5deg)}}
 
-/* team */
-.author-section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px;border-bottom:1px solid #dbe1e8;padding-bottom:12px}
-.author-section-heading span{font:800 10px 'Outfit',sans-serif;letter-spacing:2px;color:#64748b}.author-section-heading h2{font:800 25px 'Outfit',sans-serif;color:#111827}
-.author-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.author-card{position:relative;overflow:hidden;min-height:410px;padding:23px;background:#fff;border:1px solid #e5e7eb;border-radius:24px;box-shadow:0 12px 30px rgba(15,23,42,.06);transition:.35s cubic-bezier(.2,.8,.2,1)}
-.author-card:hover{transform:translateY(-9px) rotate(-.5deg);box-shadow:0 24px 45px rgba(15,23,42,.12)}
-.author-card:after{content:"";position:absolute;width:150px;height:150px;right:-75px;top:-75px;border-radius:50%;background:var(--card-accent);opacity:.10}
+/* team section */
+.author-section-heading{
+ display:grid;grid-template-columns:auto 1fr;align-items:end;column-gap:15px;
+ margin-bottom:22px;border-bottom:1px solid #dbe1e8;padding-bottom:14px
+}
+.author-section-heading span{font:800 10px 'Outfit',sans-serif;letter-spacing:2px;color:#64748b;grid-column:1/3}
+.author-section-heading h2{font:800 27px 'Outfit',sans-serif;color:#111827;margin:4px 0 0}
+.author-team-intro{max-width:760px;margin:5px 0 0;color:#64748b;font-size:13px;line-height:1.7;grid-column:2}
+.author-team-intro strong{color:#1e3a8a}
+.author-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.author-card{
+ position:relative;overflow:hidden;min-height:430px;padding:24px;background:rgba(255,255,255,.94);
+ border:1px solid #e2e8f0;border-radius:28px;box-shadow:0 14px 35px rgba(15,23,42,.07);
+ transition:.35s cubic-bezier(.2,.8,.2,1)
+}
+.author-card:hover{transform:translateY(-10px);box-shadow:0 28px 55px rgba(15,23,42,.13);border-color:var(--card-accent)}
+.author-card:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--card-accent)}
+.author-card:after{content:"";position:absolute;width:180px;height:180px;right:-90px;top:-90px;border-radius:50%;background:var(--card-accent);opacity:.10}
 .author-card-blue{--card-accent:#2563eb}.author-card-pink{--card-accent:#ec4899}.author-card-purple{--card-accent:#8b5cf6}.author-card-green{--card-accent:#10b981}
-.author-avatar{position:relative;width:104px;height:104px;margin-bottom:18px;border-radius:30px;background:linear-gradient(145deg,#f8fafc,#e9eefc);border:2px dashed var(--card-accent);display:flex;align-items:flex-end;justify-content:center;overflow:visible;isolation:isolate}
+.author-avatar{
+ position:relative;width:112px;height:112px;margin-bottom:18px;border-radius:32px;
+ background:linear-gradient(145deg,#f8fafc,#e9eefc);border:2px dashed var(--card-accent);
+ display:flex;align-items:flex-end;justify-content:center;overflow:visible;isolation:isolate;
+ box-shadow:0 12px 25px rgba(15,23,42,.07)
+}
 .avatar-person{position:relative;width:78px;height:94px;animation:avatarFloat 3.8s ease-in-out infinite;filter:drop-shadow(0 8px 7px rgba(15,23,42,.13))}
 .avatar-head{position:absolute;z-index:4;left:16px;top:8px;width:48px;height:52px;border-radius:46% 46% 43% 43%;background:var(--skin,#ffd8bf);border:2px solid #172033;box-sizing:border-box}
 .avatar-hair{position:absolute;z-index:5;left:10px;top:2px;width:60px;height:34px;border-radius:55% 55% 35% 25%;background:var(--hair,#1e293b);border:2px solid #172033;transform:rotate(-4deg)}
@@ -425,18 +464,55 @@
 .avatar-body{position:absolute;z-index:3;left:9px;bottom:0;width:60px;height:43px;border-radius:24px 24px 12px 12px;background:#fff;border:2px solid #172033;overflow:hidden}
 .avatar-body:before{content:"";position:absolute;left:25px;top:0;width:10px;height:43px;background:var(--card-accent);transform:skewX(-8deg)}
 .avatar-body:after{content:"";position:absolute;left:27px;top:6px;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 12px 0 #fff}
-.avatar-badge{position:absolute;z-index:7;right:-5px;bottom:5px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid var(--card-accent);color:var(--card-accent);font-size:12px;box-shadow:0 5px 12px rgba(15,23,42,.12)}
-.avatar-spark{position:absolute;right:-8px;top:-10px;width:25px;height:25px;border-radius:50%;background:#fff;border:1px solid #dbe3ee;display:grid;place-items:center;color:var(--card-accent);font-size:12px;z-index:8}
-.avatar-doodle{display:none}
+.avatar-badge{position:absolute;z-index:7;right:-5px;bottom:5px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid var(--card-accent);color:var(--card-accent);font-size:12px;box-shadow:0 5px 12px rgba(15,23,42,.12)}
+.avatar-spark{position:absolute;right:-8px;top:-10px;width:27px;height:27px;border-radius:50%;background:#fff;border:1px solid #dbe3ee;display:grid;place-items:center;color:var(--card-accent);font-size:12px;z-index:8}
 .avatar-banny{--hair:#172554;--skin:#f4c7a8}.avatar-farida{--hair:#4a2632;--skin:#f2c6aa}.avatar-meena{--hair:#3b241b;--skin:#e9b995}.avatar-sameera{--hair:#172033;--skin:#dca17e}
 @keyframes avatarFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1deg)}}
-.avatar-spark{position:absolute;right:-8px;top:-8px;width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid #e2e8f0;color:var(--card-accent);font-size:12px}
 .author-card-top{display:flex;justify-content:space-between;color:#9aa1ad;font:800 8px 'Outfit',sans-serif;letter-spacing:1.2px}
-.author-card h3{margin:10px 0 2px;font:800 24px 'Outfit',sans-serif;color:#111827;letter-spacing:-.8px}
+.author-card h3{margin:10px 0 3px;font:800 25px 'Outfit',sans-serif;color:#111827;letter-spacing:-.8px}
 .author-role{color:var(--card-accent);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
 .author-bio{color:#6b7280;font-size:12px;line-height:1.75}
-.author-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:18px}.author-tags span{padding:5px 8px;border-radius:999px;background:#f8fafc;border:1px solid #e5e7eb;color:#64748b;font-size:8px;font-weight:800}
+.author-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}.author-tags span{padding:6px 9px;border-radius:999px;background:#f8fafc;border:1px solid #e5e7eb;color:#64748b;font-size:8px;font-weight:800}
 .author-footer-line{display:flex;justify-content:space-between;gap:12px;margin-top:38px;padding-top:15px;border-top:1px solid #dbe1e8;color:#9aa1ad;font:800 8px 'Outfit',sans-serif;letter-spacing:1.4px}
+
+/* published book highlight */
+.author-book-feature{
+ margin:62px 0 24px;border:1px solid rgba(99,102,241,.16);border-radius:32px;padding:36px 40px;
+ display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:28px;
+ background:linear-gradient(135deg,#eef2ff 0%,#fff 52%,#fdf2f8 100%);
+ box-shadow:0 22px 65px rgba(30,41,59,.09);overflow:hidden;position:relative
+}
+.author-book-feature:before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(129,140,248,.12);right:-90px;top:-120px}
+.book-eyebrow{font-size:10px;letter-spacing:.18em;font-weight:900;color:#4f46e5}
+.book-feature-copy h3{font-family:'DM Serif Display',serif;font-size:clamp(27px,3vw,40px);line-height:1.05;margin:9px 0 13px;color:#111827}
+.book-feature-copy p{max-width:680px;color:#64748b;font-size:14px;line-height:1.75;margin:0}
+.book-feature-pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.book-feature-pills span{font-size:10px;font-weight:800;color:#475569;background:rgba(255,255,255,.8);border:1px solid rgba(148,163,184,.25);padding:8px 11px;border-radius:999px}
+.book-amazon-btn{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border-radius:13px;background:#111827;color:white;text-decoration:none;font-size:12px;font-weight:900;box-shadow:0 10px 24px rgba(15,23,42,.15);transition:.2s}.book-amazon-btn:hover{transform:translateY(-2px)}
+.book-feature-art{min-height:300px;display:flex;align-items:center;justify-content:center;position:relative}.book-glow{position:absolute;width:245px;height:245px;border-radius:50%;background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(236,72,153,.15));filter:blur(2px)}
+.book-image-frame{width:190px;height:255px;position:relative;z-index:2;transform:rotate(-4deg);transition:.35s;filter:drop-shadow(-14px 20px 22px rgba(49,46,129,.22))}.book-image-frame:hover{transform:rotate(0deg) translateY(-6px) scale(1.03)}
+.book-cover-real{display:block;width:100%;height:100%;object-fit:cover;border-radius:7px 14px 14px 7px;background:#fff;box-shadow:0 14px 30px rgba(15,23,42,.18),8px 9px 0 rgba(255,255,255,.75)}
+.book-image-badge{position:absolute;z-index:5;right:-28px;top:16px;padding:7px 10px;border-radius:999px;background:#111827;color:#fff;font-size:7px;font-weight:900;letter-spacing:.12em;box-shadow:0 8px 18px rgba(15,23,42,.18)}
+.book-image-shine{position:absolute;inset:0;border-radius:7px 14px 14px 7px;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.2) 48%,transparent 70%);pointer-events:none;mix-blend-mode:screen}
+.book-image-fallback{width:100%;height:100%;border-radius:7px 14px 14px 7px;padding:20px 15px;background:linear-gradient(145deg,#172554,#4338ca 55%,#7c3aed);color:#fff;box-shadow:0 14px 30px rgba(15,23,42,.18);flex-direction:column;justify-content:center;gap:22px;text-align:center}.book-image-fallback strong{font-size:21px;line-height:.92;letter-spacing:-.04em}.book-image-fallback span{font-size:7px;letter-spacing:.1em;font-weight:900}
+.book-spark{position:absolute;z-index:3;right:13%;top:13%;font-size:25px;color:#ec4899;animation:personFloat 3s ease-in-out infinite}
+
+@media(max-width:900px){
+ .author-grid{grid-template-columns:repeat(2,1fr)}
+ .author-section-heading{display:block}.author-team-intro{margin-top:8px}
+}
+@media(max-width:700px){
+ .author-book-feature{grid-template-columns:1fr;padding:27px 22px}
+ .book-feature-art{min-height:270px}.book-image-frame{width:175px;height:235px}.book-image-badge{right:-20px}
+ .author-team-intro{font-size:13px}
+}
+@media(max-width:640px){
+ .author-hero h1{font-size:46px}.author-quote{padding:16px 22px}.author-quote p{font-size:14px}
+ .doodle-stage{min-height:500px;margin-bottom:55px}.doodle-stage:before{width:270px;height:270px}
+ .anime-person{transform:scale(.86);animation:personFloat 4s ease-in-out infinite}
+ .doodle-note{font-size:7px}.note-left{left:2%;top:22%}.note-right{right:2%;top:23%}
+ .author-grid{grid-template-columns:1fr}.author-card{min-height:0}.author-footer-line{flex-direction:column;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.anime-person,.doodle-spark,.avatar-person{animation:none!important}}
 
 /* Instagram-style welcome popup */
 #instagram-welcome-modal{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(15,23,42,.62);backdrop-filter:blur(10px)}
@@ -460,6 +536,227 @@
 @media(prefers-reduced-motion:reduce){.anime-person,.doodle-spark{animation:none!important}}
 
 .author-team-intro{max-width:760px;margin:10px auto 0;color:#64748b;font-size:14px;line-height:1.7}.author-team-intro strong{color:#1e3a8a}.author-card strong{color:#172554}.author-book-feature{margin:58px 0 24px;border:1px solid rgba(99,102,241,.16);border-radius:30px;padding:34px 38px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:28px;background:linear-gradient(135deg,#eef2ff 0%,#fff 52%,#fdf2f8 100%);box-shadow:0 20px 60px rgba(30,41,59,.08);overflow:hidden;position:relative}.author-book-feature:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(129,140,248,.12);right:-90px;top:-120px}.book-eyebrow{font-size:10px;letter-spacing:.18em;font-weight:900;color:#4f46e5}.book-feature-copy h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(25px,3vw,38px);line-height:1.05;margin:9px 0 13px;color:#111827}.book-feature-copy p{max-width:680px;color:#64748b;font-size:14px;line-height:1.75;margin:0}.book-feature-pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.book-feature-pills span{font-size:10px;font-weight:800;color:#475569;background:rgba(255,255,255,.8);border:1px solid rgba(148,163,184,.25);padding:8px 11px;border-radius:999px}.book-amazon-btn{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border-radius:13px;background:#111827;color:white;text-decoration:none;font-size:12px;font-weight:900;box-shadow:0 10px 24px rgba(15,23,42,.15);transition:.2s}.book-amazon-btn:hover{transform:translateY(-2px)}.book-feature-art{min-height:300px;display:flex;align-items:center;justify-content:center;position:relative}.book-glow{position:absolute;width:245px;height:245px;border-radius:50%;background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(236,72,153,.15));filter:blur(2px)}.book-image-frame{width:190px;height:255px;position:relative;z-index:2;transform:rotate(-4deg);transition:.35s;filter:drop-shadow(-14px 20px 22px rgba(49,46,129,.22))}.book-image-frame:hover{transform:rotate(0deg) translateY(-6px) scale(1.03)}.book-cover-real{display:block;width:100%;height:100%;object-fit:cover;border-radius:7px 14px 14px 7px;background:#fff;box-shadow:0 14px 30px rgba(15,23,42,.18),8px 9px 0 rgba(255,255,255,.75)}.book-image-badge{position:absolute;z-index:5;right:-28px;top:16px;padding:7px 10px;border-radius:999px;background:#111827;color:#fff;font-size:7px;font-weight:900;letter-spacing:.12em;box-shadow:0 8px 18px rgba(15,23,42,.18)}.book-image-shine{position:absolute;inset:0;border-radius:7px 14px 14px 7px;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.2) 48%,transparent 70%);pointer-events:none;mix-blend-mode:screen}.book-image-fallback{width:100%;height:100%;border-radius:7px 14px 14px 7px;padding:20px 15px;background:linear-gradient(145deg,#172554,#4338ca 55%,#7c3aed);color:#fff;box-shadow:0 14px 30px rgba(15,23,42,.18);flex-direction:column;justify-content:center;gap:22px;text-align:center}.book-image-fallback strong{font-size:21px;line-height:.92;letter-spacing:-.04em}.book-image-fallback span{font-size:7px;letter-spacing:.1em;font-weight:900}.book-spark{position:absolute;z-index:3;right:13%;top:13%;font-size:25px;color:#ec4899;animation:personFloat 3s ease-in-out infinite}@media(max-width:700px){.author-book-feature{grid-template-columns:1fr;padding:27px 22px}.book-feature-art{min-height:270px}.book-image-frame{width:175px;height:235px}.book-image-badge{right:-20px}.author-team-intro{font-size:13px}}
+
+
+/* =========================================================
+   MEET THE AUTHORS — NATURAL HI WAVE
+   Person stays still. Right arm lifts to the ear,
+   then the hand gives a small Hi wave.
+   ========================================================= */
+
+.doodle-stage{
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.22,.61,.36,1),
+    max-height .85s ease,
+    min-height .85s ease,
+    height .85s ease,
+    margin .85s ease,
+    padding .85s ease,
+    border-width .85s ease,
+    box-shadow .85s ease;
+}
+
+/* Character itself stays completely still */
+.author-page.author-animation-active .anime-person{
+  animation:authorPersonAppear .6s cubic-bezier(.2,.8,.2,1) both;
+}
+
+/* The whole right arm moves upward from the side to beside the ear.
+   The body/head do NOT rotate or move. */
+.anime-wave-arm{
+  position:absolute;
+  inset:0;
+  z-index:4;
+  pointer-events:none;
+  transform-origin:198px 222px;
+  transform:rotate(0deg);
+}
+
+.author-page.author-animation-active .anime-wave-arm{
+  animation:authorLiftHand 1.05s cubic-bezier(.34,1.35,.64,1) .55s both,
+            authorHandHello 1.25s ease-in-out 1.65s 2;
+}
+
+/* During the lift, the arm itself is visible behind the head,
+   while the hand stays in front. */
+.anime-wave-arm .arm-right{
+  z-index:1;
+}
+
+.anime-wave-arm .hand-right{
+  z-index:6;
+}
+
+/* Hi bubble appears only after the hand reaches the ear */
+.author-hi-bubble{
+  position:absolute;
+  z-index:10;
+  left:calc(50% + 112px);
+  top:25%;
+  padding:10px 16px;
+  border-radius:18px 18px 18px 6px;
+  background:#fff;
+  border:1px solid #dbe5f5;
+  color:#1d4ed8;
+  font:800 15px 'Outfit',sans-serif;
+  box-shadow:0 10px 25px rgba(15,23,42,.12);
+  opacity:0;
+  transform:translateY(8px) scale(.9);
+  animation:authorHiBubble 3.0s ease both;
+}
+
+.author-hi-bubble:after{
+  content:"";
+  position:absolute;
+  left:-7px;
+  bottom:4px;
+  width:13px;
+  height:13px;
+  background:#fff;
+  border-left:1px solid #dbe5f5;
+  border-bottom:1px solid #dbe5f5;
+  transform:rotate(45deg);
+}
+
+.author-page.author-animation-active .doodle-caption{
+  animation:authorCaptionWelcome 3.4s ease both;
+}
+
+.author-page.author-animation-active .doodle-spark{
+  animation:authorWelcomeSpark 1.25s ease-in-out infinite;
+}
+
+/* Remove the entire illustration after the welcome */
+.author-page.author-animation-finished .doodle-stage{
+  opacity:0;
+  transform:translateY(-20px) scale(.98);
+  max-height:0;
+  min-height:0;
+  height:0;
+  margin-top:0;
+  margin-bottom:0;
+  padding-top:0;
+  padding-bottom:0;
+  border-width:0;
+  box-shadow:none;
+  pointer-events:none;
+}
+
+.author-page .author-section-heading,
+.author-page .author-grid,
+.author-page .author-book-feature,
+.author-page .author-footer-line{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.author-page.author-animation-active .author-section-heading,
+.author-page.author-animation-active .author-grid,
+.author-page.author-animation-active .author-book-feature,
+.author-page.author-animation-active .author-footer-line{
+  opacity:0;
+  transform:translateY(24px);
+}
+
+.author-page.author-animation-finished .author-section-heading{
+  animation:authorsRiseUp .7s cubic-bezier(.22,.61,.36,1) both;
+}
+
+.author-page.author-animation-finished .author-grid{
+  animation:authorsRiseUp .75s cubic-bezier(.22,.61,.36,1) .08s both;
+}
+
+.author-page.author-animation-finished .author-book-feature{
+  animation:authorsRiseUp .75s cubic-bezier(.22,.61,.36,1) .16s both;
+}
+
+.author-page.author-animation-finished .author-footer-line{
+  animation:authorsRiseUp .75s cubic-bezier(.22,.61,.36,1) .22s both;
+}
+
+/* Person enters without rotating */
+@keyframes authorPersonAppear{
+  from{opacity:0;transform:translateY(12px) scale(.97)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+/* STEP 1 — lift the right hand all the way up beside the ear */
+@keyframes authorLiftHand{
+  0%{transform:rotate(0deg)}
+  65%{transform:rotate(-150deg)}
+  82%{transform:rotate(-166deg)}
+  100%{transform:rotate(-160deg)}
+}
+
+/* STEP 2 — small natural Hi movement while hand is raised */
+@keyframes authorHandHello{
+  0%{transform:rotate(-160deg)}
+  18%{transform:rotate(-168deg)}
+  36%{transform:rotate(-153deg)}
+  54%{transform:rotate(-168deg)}
+  72%{transform:rotate(-153deg)}
+  100%{transform:rotate(-160deg)}
+}
+
+@keyframes authorHiBubble{
+  0%,18%{opacity:0;transform:translateY(8px) scale(.9)}
+  25%,78%{opacity:1;transform:translateY(0) scale(1)}
+  100%{opacity:0;transform:translateY(-6px) scale(.96)}
+}
+
+@keyframes authorCaptionWelcome{
+  0%,15%{opacity:0;transform:translateY(8px)}
+  25%,72%{opacity:1;transform:translateY(0)}
+  100%{opacity:0;transform:translateY(-5px)}
+}
+
+@keyframes authorWelcomeSpark{
+  0%,100%{transform:translateY(0) scale(1);opacity:.65}
+  50%{transform:translateY(-10px) scale(1.18);opacity:1}
+}
+
+@keyframes authorsRiseUp{
+  from{opacity:0;transform:translateY(32px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:700px){
+  .anime-wave-arm{
+    transform-origin:198px 222px;
+  }
+  .author-hi-bubble{
+    left:calc(50% + 82px);
+    top:23%;
+    font-size:13px;
+    padding:9px 13px;
+  }
+}
+
+@media(max-width:640px){
+  .author-hi-bubble{
+    left:calc(50% + 58px);
+    top:21%;
+    font-size:12px;
+    padding:8px 11px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .author-page.author-animation-active .anime-person,
+  .author-page.author-animation-active .anime-wave-arm,
+  .author-page.author-animation-active .doodle-caption,
+  .author-page.author-animation-active .doodle-spark,
+  .author-page.author-animation-active .author-hi-bubble,
+  .author-page.author-animation-finished .author-section-heading,
+  .author-page.author-animation-finished .author-grid,
+  .author-page.author-animation-finished .author-card,
+  .author-page.author-animation-finished .author-book-feature,
+  .author-page.author-animation-finished .author-footer-line{
+    animation:none!important;
+  }
+}
+
 </style>
 </head>
 <body class="h-full font-body" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);">
@@ -489,7 +786,7 @@
     <!-- Scrolling Offer Marquee -->
     <div class="marquee-container">
       <div class="marquee-content">
-        <span>✨ Featured Book: Nano Particles & Nano Carriers in Drug Delivery — Banny SV & Fardia Banu S</span>
+        <span>✨ Featured Book: Nano Particles & Nano Carriers in Drug Delivery — by Banny S.V. & Farida Banu S.</span>
         <span>🧪 Precision Learning: Advanced Instrumental Techniques by Sameera P</span>
         <span>📊 From Basics to Advanced — Master Pharmaceutics & Analysis</span>
         <span>🏆 Comprehensive Guide to Pharmaceutics & Modern Pharmaceutical Analysis</span>
@@ -743,7 +1040,7 @@
       
 <!-- ================= ABOUT THE AUTHORS PAGE ================= -->
 <div id="page-about" class="hidden">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 author-page">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 author-page author-animation-active">
 
     <div class="author-hero fade-in">
       <div class="author-kicker"><span>✦</span> THE PEOPLE BEHIND PG26</div>
@@ -766,6 +1063,7 @@
       <div class="doodle-spark spark-c">•</div>
       <div class="doodle-note note-left">RESEARCH<br>+<br>CREATIVITY</div>
       <div class="doodle-note note-right">LEARN<br>BUILD<br>SHARE</div>
+      <div class="author-hi-bubble" aria-hidden="true">Hi 👋</div>
 
       <div class="anime-person">
         <div class="anime-hair-back"></div>
@@ -787,9 +1085,12 @@
           <div class="shirt"></div>
         </div>
         <div class="anime-arm arm-left"></div>
-        <div class="anime-arm arm-right"></div>
-        <div class="anime-hand hand-left">✎</div>
-        <div class="anime-hand hand-right">💊</div>
+
+        <!-- RIGHT ARM + HAND: one unit so the hand lifts naturally to the ear -->
+        <div class="anime-wave-arm">
+          <div class="anime-arm arm-right"></div>
+          <div class="anime-hand hand-right">👋</div>
+        </div>
       </div>
 
       <div class="doodle-caption">
@@ -817,7 +1118,7 @@
         <div class="author-card-top"><span>01</span><span>TECH + RESEARCH</span></div>
         <h3>Banny S.V.</h3>
         <p class="author-role">Pharmacist · Web Developer & Research Author</p>
-        <p class="author-bio">Pharmacist, lead developer and manager of PharmacyGuides26. Researcher in NDDS & Matrix Tablets. Together with Farida Banu S., published <strong>4+ review articles</strong> and co-authored the book <strong>Nano Particles & Nano Carriers in Drug Delivery Systems</strong>.</p>
+        <p class="author-bio">Pharmacist and web developer experienced in NDDS and Matrix Tablets. Focused on educational technology, pharmaceutical research, and digital learning, with a passion for bridging the gap between advanced pharmacy concepts and digital education.</p>
         <div class="author-tags"><span>Web</span><span>NDDS</span><span>Research</span></div>
       </article>
 
@@ -831,7 +1132,7 @@
         <div class="author-card-top"><span>02</span><span>DESIGN + MEDIA</span></div>
         <h3>Farida Banu S.</h3>
         <p class="author-role">Pharmacist · Design & Promotions Lead</p>
-        <p class="author-bio">Pharmacist, creative designer and promotions lead. Together with Banny S.V., published <strong>4+ review articles</strong> and co-authored the book <strong>Nano Particles & Nano Carriers in Drug Delivery Systems</strong>. Also contributes to academic content and digital promotions.</p>
+        <p class="author-bio">Pharmacist, creative designer and promotions lead. Focused on academic content, visual communication, branding and digital promotions for pharmacy learners.</p>
         <div class="author-tags"><span>Design</span><span>Content</span><span>Social</span></div>
       </article>
 
@@ -1272,6 +1573,27 @@ discount: 85,
       setTimeout(openInstagramWelcome, 1100);
     }
 
+    // ================= MEET THE AUTHORS WELCOME ANIMATION =================
+    function playAuthorsWelcomeAnimation() {
+      const authorPage = document.querySelector('.author-page');
+      if (!authorPage) return;
+
+      authorPage.classList.remove('author-animation-finished');
+      authorPage.classList.remove('author-animation-active');
+
+      // Force the browser to restart the CSS animation every time.
+      void authorPage.offsetWidth;
+
+      authorPage.classList.add('author-animation-active');
+
+      // Person welcomes the visitor for about 3.2 seconds,
+      // then the illustration disappears and the authors rise up.
+      setTimeout(() => {
+        authorPage.classList.remove('author-animation-active');
+        authorPage.classList.add('author-animation-finished');
+      }, 4200);
+    }
+
     // ================= NAVIGATION =================
     function navigateTo(page, params = {}) {
       event?.preventDefault();
@@ -1283,6 +1605,11 @@ discount: 85,
       if (targetPage) {
         targetPage.classList.remove('hidden');
         targetPage.classList.add('page-transition');
+      }
+
+      // Play the welcome animation whenever Meet The Authors is opened.
+      if (page === 'about') {
+        setTimeout(playAuthorsWelcomeAnimation, 80);
       }
 
       if (page === 'book-details' && params.bookId) {
