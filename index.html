@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Page Title -->
-  <title>PharmacyGuides26 - Pharma Notes, GPAT, Research Guidance</title>
+  <title>PharmacyGuides26 | Pharma Notes, GPAT, Books & Research Guidance</title>
 
   <!-- SEO -->
-  <meta name="description" content="PharmacyGuides26 provides pharmacy notes, GPAT preparation, research publishing guidance, and study materials.">
+  <meta name="description" content="PharmacyGuides26 provides pharmacy notes, GPAT preparation, pharmaceutical books, MCQs, study materials, and research publishing guidance for pharmacy students.">
 
   <meta name="keywords" content="PharmacyGuides26, Pharmacy Guides 26, GPAT, pharmacy notes, research guidance">
 
@@ -20,33 +20,74 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://pharmacyguides26.netlify.app/">
 
-  <!-- Website Name Structured Data for Google -->
+  <!-- ================= ADVANCED BRAND + SEO ================= -->
+  <meta name="theme-color" content="#1e3a8a">
+  <meta name="msapplication-TileColor" content="#1e3a8a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Google Site Name: PharmacyGuides26 -->
+  <!-- WebSite structured data is kept on the homepage to clearly signal the preferred site name. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "PharmacyGuides26",
-    "alternateName": "Pharmacy Guides 26",
-    "url": "https://pharmacyguides26.netlify.app/"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://pharmacyguides26.netlify.app/#website",
+        "name": "PharmacyGuides26",
+        "alternateName": [
+          "Pharmacy Guides 26",
+          "pharmacyguides26.netlify.app"
+        ],
+        "url": "https://pharmacyguides26.netlify.app/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://pharmacyguides26.netlify.app/#organization",
+        "name": "PharmacyGuides26",
+        "alternateName": "Pharmacy Guides 26",
+        "url": "https://pharmacyguides26.netlify.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pharmacyguides26.netlify.app/pg26.png"
+        },
+        "sameAs": [
+          "https://www.instagram.com/pharmacyguides26/",
+          "https://www.youtube.com/@pharmacyguides26",
+          "https://t.me/PharmacyGuides26",
+          "https://whatsapp.com/channel/0029VbCU4LOIXnlmAfHBLl2N"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://pharmacyguides26.netlify.app/#webpage",
+        "url": "https://pharmacyguides26.netlify.app/",
+        "name": "PharmacyGuides26 | Pharma Notes, GPAT, Books & Research Guidance",
+        "isPartOf": {
+          "@id": "https://pharmacyguides26.netlify.app/#website"
+        },
+        "about": {
+          "@id": "https://pharmacyguides26.netlify.app/#organization"
+        }
+      }
+    ]
   }
   </script>
 
-  <!-- Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "PharmacyGuides26",
-    "url": "https://pharmacyguides26.netlify.app/"
-  }
-  </script>
-
-  <!-- Open Graph -->
+  <!-- Open Graph / Social Sharing -->
   <meta property="og:site_name" content="PharmacyGuides26">
-  <meta property="og:title" content="PharmacyGuides26 - Pharma Notes, GPAT, Research Guidance">
-  <meta property="og:description" content="PharmacyGuides26 provides pharmacy notes, GPAT preparation, research guidance, and study materials.">
+  <meta property="og:title" content="PharmacyGuides26 | Pharma Notes, GPAT, Books & Research Guidance">
+  <meta property="og:description" content="PharmacyGuides26 provides pharmacy notes, GPAT preparation, pharmaceutical books, MCQs, study materials, and research publishing guidance for pharmacy students.">
   <meta property="og:url" content="https://pharmacyguides26.netlify.app/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://pharmacyguides26.netlify.app/pg26.png">
+  <meta property="og:image:alt" content="PharmacyGuides26 logo">
+
+  <!-- X / Twitter Sharing -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PharmacyGuides26 | Pharma Notes, GPAT, Books & Research Guidance">
+  <meta name="twitter:description" content="Pharmacy notes, GPAT preparation, pharmaceutical books, MCQs, and research publishing guidance.">
+  <meta name="twitter:image" content="https://pharmacyguides26.netlify.app/pg26.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -61,7 +102,6 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-</head>
   <style>
     html, body { height: 100%; margin: 0; box-sizing: border-box; }
     .font-heading { font-family: 'DM Serif Display', serif; }
@@ -312,21 +352,139 @@
   }
 }
 
-  </style>
+  
+/* ================= MODERN AUTHORS PAGE ================= */
+.author-page{position:relative}
+.author-hero{text-align:center;max-width:900px;margin:0 auto 35px}
+.author-kicker{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid #dbe4ff;border-radius:999px;background:#f8faff;color:#3158cf;font:800 10px 'Outfit',sans-serif;letter-spacing:1.7px}
+.author-hero h1{margin:16px 0 12px;font-size:clamp(44px,7vw,76px);letter-spacing:-3px;line-height:.98}
+.author-intro{max-width:650px;margin:auto;color:#64748b;font-size:15px;line-height:1.8}
+.author-quote{position:relative;max-width:760px;margin:25px auto 0;padding:18px 35px;border-top:1px dashed #cbd5e1;border-bottom:1px dashed #cbd5e1}
+.author-quote p{color:#334155;font-size:16px;font-weight:700;line-height:1.6}
+.quote-mark{position:absolute;left:0;top:2px;font:700 50px Georgia;color:#dbeafe}
+
+/* doodle stage */
+.doodle-stage{
+ position:relative;min-height:520px;margin:35px auto 70px;overflow:hidden;border-radius:34px;
+ background:linear-gradient(135deg,#eef5ff 0%,#faf7ff 52%,#effdf8 100%);
+ border:1px solid #dce5f3;box-shadow:0 25px 70px rgba(30,64,175,.10);
+ display:flex;align-items:center;justify-content:center
+}
+.doodle-grid{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(#b7c8e6 1px,transparent 1px),linear-gradient(90deg,#b7c8e6 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent)}
+.doodle-stage:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:rgba(255,255,255,.75);border:1px dashed #a8bce2;box-shadow:0 0 0 24px rgba(255,255,255,.24),0 0 0 25px #d9e3f3}
+.doodle-spark{position:absolute;font-weight:900;color:#4771dc;animation:doodleFloat 3s ease-in-out infinite}
+.spark-a{top:65px;left:22%;font-size:26px}.spark-b{top:145px;right:21%;font-size:32px;animation-delay:.6s}.spark-c{bottom:110px;left:26%;font-size:25px;animation-delay:1.1s}
+.doodle-note{position:absolute;padding:10px 12px;background:#fff;border:1px solid #dbe3ef;box-shadow:4px 5px 0 #c9d5e8;color:#59657a;font:800 9px/1.5 'Outfit',sans-serif;letter-spacing:1.2px;text-align:center}
+.note-left{left:7%;top:28%;transform:rotate(-5deg)}.note-right{right:7%;top:30%;transform:rotate(5deg)}
+.anime-person{position:relative;width:245px;height:395px;z-index:3;animation:personFloat 4s ease-in-out infinite}
+.anime-hair-back{position:absolute;width:150px;height:155px;left:47px;top:17px;background:#172554;border-radius:50% 48% 42% 50%;transform:rotate(-7deg);box-shadow:12px 10px 0 rgba(37,99,235,.12)}
+.anime-head{position:absolute;width:142px;height:155px;left:51px;top:30px;z-index:3}
+.anime-face{position:absolute;inset:15px 8px 0;background:#ffd9bd;border:3px solid #172554;border-radius:46% 46% 48% 48%;box-shadow:inset -8px -7px 0 rgba(255,180,150,.12)}
+.anime-hair{position:absolute;z-index:2;left:0;top:-10px;width:142px;height:75px;background:#172554;border-radius:55% 45% 20% 30%;clip-path:polygon(0 0,100% 0,93% 52%,82% 37%,72% 70%,59% 43%,45% 78%,32% 46%,17% 68%,5% 45%)}
+.eye{position:absolute;top:70px;width:12px;height:17px;border:3px solid #172554;border-radius:50%;background:#fff}
+.eye:after{content:"";position:absolute;width:5px;height:7px;left:1px;top:3px;border-radius:50%;background:#172554}
+.eye-left{left:31px}.eye-right{right:31px}
+.blush{position:absolute;top:93px;width:17px;height:7px;background:#f59e9e;border-radius:50%;opacity:.55}
+.blush-left{left:20px}.blush-right{right:20px}
+.smile{position:absolute;left:62px;top:103px;width:17px;height:8px;border-bottom:3px solid #9a4c4c;border-radius:0 0 50% 50%}
+.anime-neck{position:absolute;left:98px;top:168px;width:48px;height:32px;background:#ffd0b2;border:3px solid #172554;border-top:0;z-index:1}
+.anime-body{position:absolute;left:38px;top:186px;width:170px;height:190px;background:#fff;border:3px solid #172554;border-radius:35px 35px 15px 15px;z-index:2;box-shadow:10px 12px 0 rgba(37,99,235,.12)}
+.anime-body:after{content:"PG26";position:absolute;left:53px;top:110px;color:#2563eb;font:900 17px 'Outfit',sans-serif;letter-spacing:2px}
+.shirt{position:absolute;left:66px;top:0;width:37px;height:72px;background:#eef2ff;clip-path:polygon(0 0,100% 0,70% 100%,30% 100%)}
+.coat-lapel{position:absolute;top:10px;width:54px;height:78px;background:#e7eefc;border-bottom:3px solid #172554}
+.coat-lapel.left{left:9px;clip-path:polygon(0 0,100% 0,55% 100%)}.coat-lapel.right{right:9px;clip-path:polygon(0 0,100% 0,45% 100%)}
+.coat-pocket{position:absolute;right:15px;top:102px;color:#2563eb;font-size:13px}
+.anime-arm{position:absolute;z-index:1;width:48px;height:145px;background:#fff;border:3px solid #172554;border-radius:30px}
+.arm-left{left:23px;top:206px;transform:rotate(22deg)}.arm-right{right:23px;top:205px;transform:rotate(-24deg)}
+.anime-hand{position:absolute;z-index:4;font-size:25px}
+.hand-left{left:3px;top:315px;transform:rotate(-15deg)}.hand-right{right:2px;top:310px;transform:rotate(13deg)}
+.doodle-caption{position:absolute;bottom:27px;display:flex;flex-direction:column;align-items:center;gap:3px;color:#475569;font-size:10px;letter-spacing:2px}
+.doodle-caption strong{font-size:13px;color:#172554}.doodle-caption span{font-weight:700;color:#94a3b8}
+@keyframes personFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
+@keyframes doodleFloat{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-9px) rotate(5deg)}}
+
+/* team */
+.author-section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px;border-bottom:1px solid #dbe1e8;padding-bottom:12px}
+.author-section-heading span{font:800 10px 'Outfit',sans-serif;letter-spacing:2px;color:#64748b}.author-section-heading h2{font:800 25px 'Outfit',sans-serif;color:#111827}
+.author-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.author-card{position:relative;overflow:hidden;min-height:410px;padding:23px;background:#fff;border:1px solid #e5e7eb;border-radius:24px;box-shadow:0 12px 30px rgba(15,23,42,.06);transition:.35s cubic-bezier(.2,.8,.2,1)}
+.author-card:hover{transform:translateY(-9px) rotate(-.5deg);box-shadow:0 24px 45px rgba(15,23,42,.12)}
+.author-card:after{content:"";position:absolute;width:150px;height:150px;right:-75px;top:-75px;border-radius:50%;background:var(--card-accent);opacity:.10}
+.author-card-blue{--card-accent:#2563eb}.author-card-pink{--card-accent:#ec4899}.author-card-purple{--card-accent:#8b5cf6}.author-card-green{--card-accent:#10b981}
+.author-avatar{position:relative;width:104px;height:104px;margin-bottom:18px;border-radius:30px;background:linear-gradient(145deg,#f8fafc,#e9eefc);border:2px dashed var(--card-accent);display:flex;align-items:flex-end;justify-content:center;overflow:visible;isolation:isolate}
+.avatar-person{position:relative;width:78px;height:94px;animation:avatarFloat 3.8s ease-in-out infinite;filter:drop-shadow(0 8px 7px rgba(15,23,42,.13))}
+.avatar-head{position:absolute;z-index:4;left:16px;top:8px;width:48px;height:52px;border-radius:46% 46% 43% 43%;background:var(--skin,#ffd8bf);border:2px solid #172033;box-sizing:border-box}
+.avatar-hair{position:absolute;z-index:5;left:10px;top:2px;width:60px;height:34px;border-radius:55% 55% 35% 25%;background:var(--hair,#1e293b);border:2px solid #172033;transform:rotate(-4deg)}
+.avatar-hair:after{content:"";position:absolute;left:2px;top:19px;width:17px;height:27px;background:var(--hair,#1e293b);border-radius:80% 20% 70% 30%;transform:rotate(15deg)}
+.avatar-face{position:absolute;left:10px;top:16px;width:28px;height:24px}
+.avatar-eye{position:absolute;top:8px;width:6px;height:8px;border-radius:50%;background:#172033}
+.avatar-eye:after{content:"";position:absolute;left:1px;top:1px;width:2px;height:2px;border-radius:50%;background:#fff}
+.avatar-eye.left{left:3px}.avatar-eye.right{right:3px}
+.avatar-mouth{position:absolute;left:11px;top:19px;width:8px;height:4px;border-bottom:2px solid #9f4561;border-radius:50%}
+.avatar-neck{position:absolute;z-index:2;left:33px;top:54px;width:14px;height:13px;background:var(--skin,#ffd8bf);border:2px solid #172033;border-top:0}
+.avatar-body{position:absolute;z-index:3;left:9px;bottom:0;width:60px;height:43px;border-radius:24px 24px 12px 12px;background:#fff;border:2px solid #172033;overflow:hidden}
+.avatar-body:before{content:"";position:absolute;left:25px;top:0;width:10px;height:43px;background:var(--card-accent);transform:skewX(-8deg)}
+.avatar-body:after{content:"";position:absolute;left:27px;top:6px;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 12px 0 #fff}
+.avatar-badge{position:absolute;z-index:7;right:-5px;bottom:5px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid var(--card-accent);color:var(--card-accent);font-size:12px;box-shadow:0 5px 12px rgba(15,23,42,.12)}
+.avatar-spark{position:absolute;right:-8px;top:-10px;width:25px;height:25px;border-radius:50%;background:#fff;border:1px solid #dbe3ee;display:grid;place-items:center;color:var(--card-accent);font-size:12px;z-index:8}
+.avatar-doodle{display:none}
+.avatar-banny{--hair:#172554;--skin:#f4c7a8}.avatar-farida{--hair:#4a2632;--skin:#f2c6aa}.avatar-meena{--hair:#3b241b;--skin:#e9b995}.avatar-sameera{--hair:#172033;--skin:#dca17e}
+@keyframes avatarFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1deg)}}
+.avatar-spark{position:absolute;right:-8px;top:-8px;width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid #e2e8f0;color:var(--card-accent);font-size:12px}
+.author-card-top{display:flex;justify-content:space-between;color:#9aa1ad;font:800 8px 'Outfit',sans-serif;letter-spacing:1.2px}
+.author-card h3{margin:10px 0 2px;font:800 24px 'Outfit',sans-serif;color:#111827;letter-spacing:-.8px}
+.author-role{color:var(--card-accent);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.author-bio{color:#6b7280;font-size:12px;line-height:1.75}
+.author-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:18px}.author-tags span{padding:5px 8px;border-radius:999px;background:#f8fafc;border:1px solid #e5e7eb;color:#64748b;font-size:8px;font-weight:800}
+.author-footer-line{display:flex;justify-content:space-between;gap:12px;margin-top:38px;padding-top:15px;border-top:1px solid #dbe1e8;color:#9aa1ad;font:800 8px 'Outfit',sans-serif;letter-spacing:1.4px}
+
+/* Instagram-style welcome popup */
+#instagram-welcome-modal{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(15,23,42,.62);backdrop-filter:blur(10px)}
+#instagram-welcome-modal.show{display:flex;animation:igFade .25s ease}
+.ig-popup{position:relative;width:min(420px,94vw);overflow:hidden;background:#fff;border-radius:28px;box-shadow:0 30px 100px rgba(0,0,0,.30);animation:igPop .35s cubic-bezier(.2,.8,.2,1)}
+.ig-gradient{height:105px;background:linear-gradient(120deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);position:relative}
+.ig-profile{position:absolute;left:50%;bottom:-38px;transform:translateX(-50%);width:78px;height:78px;padding:4px;border-radius:50%;background:#fff;box-shadow:0 7px 22px rgba(0,0,0,.15)}
+.ig-profile img{width:100%;height:100%;object-fit:contain;border-radius:50%;background:#eef2ff}
+.ig-close{position:absolute;right:12px;top:12px;width:34px;height:34px;border:0;border-radius:50%;background:rgba(0,0,0,.18);color:#fff;font-size:20px}
+.ig-content{text-align:center;padding:48px 25px 25px}.ig-content h2{font:800 25px 'Outfit',sans-serif;color:#111827;margin-bottom:4px}.ig-handle{color:#6b7280;font-size:12px;font-weight:700}.ig-copy{color:#6b7280;font-size:13px;line-height:1.65;margin:13px auto 18px;max-width:320px}
+.ig-follow{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;border:0;border-radius:13px;background:linear-gradient(90deg,#d62976,#8b2fc9);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 10px 24px rgba(214,41,118,.2);transition:.2s}
+.ig-follow:hover{transform:translateY(-2px)}.ig-later{display:block;margin:12px auto 0;border:0;background:none;color:#8a8f99;font-size:11px;font-weight:700}
+@keyframes igPop{from{opacity:0;transform:translateY(20px) scale(.96)}to{opacity:1;transform:none}}@keyframes igFade{from{opacity:0}to{opacity:1}}
+@media(max-width:900px){.author-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+ .author-hero h1{font-size:46px}.author-quote{padding:16px 22px}.author-quote p{font-size:14px}
+ .doodle-stage{min-height:500px;margin-bottom:55px}.doodle-stage:before{width:270px;height:270px}
+ .anime-person{transform:scale(.86);animation:personFloat 4s ease-in-out infinite}.doodle-note{font-size:7px}.note-left{left:2%;top:22%}.note-right{right:2%;top:23%}
+ .author-grid{grid-template-columns:1fr}.author-card{min-height:0}.author-footer-line{flex-direction:column;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.anime-person,.doodle-spark{animation:none!important}}
+
+.author-team-intro{max-width:760px;margin:10px auto 0;color:#64748b;font-size:14px;line-height:1.7}.author-team-intro strong{color:#1e3a8a}.author-card strong{color:#172554}.author-book-feature{margin:58px 0 24px;border:1px solid rgba(99,102,241,.16);border-radius:30px;padding:34px 38px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:28px;background:linear-gradient(135deg,#eef2ff 0%,#fff 52%,#fdf2f8 100%);box-shadow:0 20px 60px rgba(30,41,59,.08);overflow:hidden;position:relative}.author-book-feature:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(129,140,248,.12);right:-90px;top:-120px}.book-eyebrow{font-size:10px;letter-spacing:.18em;font-weight:900;color:#4f46e5}.book-feature-copy h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(25px,3vw,38px);line-height:1.05;margin:9px 0 13px;color:#111827}.book-feature-copy p{max-width:680px;color:#64748b;font-size:14px;line-height:1.75;margin:0}.book-feature-pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.book-feature-pills span{font-size:10px;font-weight:800;color:#475569;background:rgba(255,255,255,.8);border:1px solid rgba(148,163,184,.25);padding:8px 11px;border-radius:999px}.book-amazon-btn{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border-radius:13px;background:#111827;color:white;text-decoration:none;font-size:12px;font-weight:900;box-shadow:0 10px 24px rgba(15,23,42,.15);transition:.2s}.book-amazon-btn:hover{transform:translateY(-2px)}.book-feature-art{min-height:300px;display:flex;align-items:center;justify-content:center;position:relative}.book-glow{position:absolute;width:245px;height:245px;border-radius:50%;background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(236,72,153,.15));filter:blur(2px)}.book-image-frame{width:190px;height:255px;position:relative;z-index:2;transform:rotate(-4deg);transition:.35s;filter:drop-shadow(-14px 20px 22px rgba(49,46,129,.22))}.book-image-frame:hover{transform:rotate(0deg) translateY(-6px) scale(1.03)}.book-cover-real{display:block;width:100%;height:100%;object-fit:cover;border-radius:7px 14px 14px 7px;background:#fff;box-shadow:0 14px 30px rgba(15,23,42,.18),8px 9px 0 rgba(255,255,255,.75)}.book-image-badge{position:absolute;z-index:5;right:-28px;top:16px;padding:7px 10px;border-radius:999px;background:#111827;color:#fff;font-size:7px;font-weight:900;letter-spacing:.12em;box-shadow:0 8px 18px rgba(15,23,42,.18)}.book-image-shine{position:absolute;inset:0;border-radius:7px 14px 14px 7px;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.2) 48%,transparent 70%);pointer-events:none;mix-blend-mode:screen}.book-image-fallback{width:100%;height:100%;border-radius:7px 14px 14px 7px;padding:20px 15px;background:linear-gradient(145deg,#172554,#4338ca 55%,#7c3aed);color:#fff;box-shadow:0 14px 30px rgba(15,23,42,.18);flex-direction:column;justify-content:center;gap:22px;text-align:center}.book-image-fallback strong{font-size:21px;line-height:.92;letter-spacing:-.04em}.book-image-fallback span{font-size:7px;letter-spacing:.1em;font-weight:900}.book-spark{position:absolute;z-index:3;right:13%;top:13%;font-size:25px;color:#ec4899;animation:personFloat 3s ease-in-out infinite}@media(max-width:700px){.author-book-feature{grid-template-columns:1fr;padding:27px 22px}.book-feature-art{min-height:270px}.book-image-frame{width:175px;height:235px}.book-image-badge{right:-20px}.author-team-intro{font-size:13px}}
+</style>
 </head>
 <body class="h-full font-body" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);">
 
-  <!-- ✅ SEO CONTENT (HIDDEN - SAFE, NO UI CHANGE) -->
-  <div style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">
-    <h1>PharmacyGuides26</h1>
-    <h2>Pharmacy Notes, GPAT Preparation, Research Guidance</h2>
-    <p>
-      PharmacyGuides26 provides pharmacy notes, GPAT preparation materials,
-      pharmaceutical books, MCQs, and research publishing guidance for students.
-    </p>
+  
+<!-- One-time Instagram welcome popup -->
+<div id="instagram-welcome-modal" role="dialog" aria-modal="true" aria-labelledby="ig-welcome-title">
+  <div class="ig-popup">
+    <div class="ig-gradient">
+      <button class="ig-close" type="button" onclick="closeInstagramWelcome()" aria-label="Close Instagram popup">×</button>
+      <div class="ig-profile"><img src="./pg26.png" alt="PharmacyGuides26"></div>
+    </div>
+    <div class="ig-content">
+      <h2 id="ig-welcome-title">PharmacyGuides26</h2>
+      <div class="ig-handle">@pharmacyguides26</div>
+      <p class="ig-copy">Follow our Instagram for pharmacy notes, book updates, research content, educational posts and new PG26 updates.</p>
+      <a class="ig-follow" href="https://www.instagram.com/pharmacyguides26/" target="_blank" rel="noopener noreferrer" onclick="closeInstagramWelcome()">
+        <i data-lucide="instagram" class="w-4 h-4"></i> Visit Instagram
+      </a>
+      <button class="ig-later" type="button" onclick="closeInstagramWelcome()">Maybe later</button>
+    </div>
   </div>
+</div>
 
-  <div id="app-wrapper" class="w-full h-full overflow-auto">
+<div id="app-wrapper" class="w-full h-full overflow-auto">
     
     <!-- Scrolling Offer Marquee -->
     <div class="marquee-container">
@@ -419,7 +577,7 @@
             <button onclick="toggleMobileMenu()" class="lg:hidden p-2 hover:bg-gray-100 rounded-lg"><i data-lucide="menu" class="w-6 h-6"></i></button> 
             <a href="#" onclick="navigateTo('home')" class="flex items-center gap-3">
               <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl gradient-bg flex items-center justify-center shadow-md">
-                <img src="./pg26.png" alt="Logo" class="w-full h-full object-contain">
+                <img src="./pg26.png" alt="PharmacyGuides26 logo" class="w-full h-full object-contain">
               </div>
               <div>
                 <h1 class="text-xl sm:text-2xl font-black text-blue-900 leading-none tracking-tight font-heading">PharmacyGuides26</h1>
@@ -465,7 +623,7 @@
             <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-bold mb-6 tracking-widest uppercase bg-blue-900/50 text-blue-100 border border-blue-400/30 backdrop-blur-sm shadow-inner">
               <i data-lucide="award" style="width:16px;height:16px;"></i> The Ultimate Guide for Pharmacy Students
             </div>
-            <h1 class="font-heading text-4xl sm:text-5xl lg:text-7xl leading-tight mb-6 text-white text-shadow">Master Pharmaceutics <br>& Instrumental Analysis</h1>
+            <h1 class="font-heading text-4xl sm:text-5xl lg:text-7xl leading-tight mb-6 text-white text-shadow">PharmacyGuides26<br><span class="text-3xl sm:text-4xl lg:text-6xl">Master Pharmaceutics &amp; Instrumental Analysis</span></h1>
             <p class="text-lg sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed text-blue-100 font-medium">Comprehensive guides on drug delivery systems and modern instrumental techniques crafted for deep understanding and real-world application.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <button onclick="navigateTo('books')" class="px-8 py-4 rounded-xl bg-white text-blue-900 font-black text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-2"> 
@@ -560,8 +718,6 @@
   <i data-lucide="star" class="w-8 h-8 text-gray-300 cursor-pointer" onclick="setRating(5)"></i>
 </div>
 <input type="hidden" id="rating-value" value="0">
-<input type="hidden" id="rating-value" value="0">
-                  <input type="hidden" id="rating-value" value="0">
                 </div>
               </div>
               <div class="mb-8">
@@ -584,70 +740,165 @@
       Go to Publishing Guide
    </a>
 </section>
-      <!-- ================= ABOUT THE AUTHORS PAGE ================= -->
-      <div id="page-about" class="hidden">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-          <div class="text-center mb-16">
-            <h1 class="font-heading text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Meet The Authors</h1>
-            <div class="max-w-3xl mx-auto py-6 border-y border-gray-200 relative">
-              <i data-lucide="quote" class="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-10 text-gray-200 -z-10"></i>
-              <h2 class="text-2xl font-bold text-blue-900 italic leading-snug">"Education is the wind beneath our wings. We aim to enhance those wings to help you soar to new heights in Pharmacy."</h2>
-            </div>
-          </div>
-          
-          <!-- Team Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            
-          <!-- Banny S.V. -->
-<div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
-  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-blue-100 to-blue-200 text-blue-600 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white outline outline-blue-100">
-    <i data-lucide="laptop" class="w-10 h-10"></i>
-  </div>
-  <h3 class="font-black text-xl text-gray-900 mb-1">Banny S.V.</h3>
-  <p class="text-sm text-blue-600 font-bold uppercase tracking-wider mb-4">Web Developer & Research Author</p>
-  <p class="text-gray-500 text-sm">
-    Lead developer and manager of this platform. Researcher in NDDS & Matrix Tablets. Authored 4 review articles with academic presence on ResearchGate, Google Scholar, and SlideShare.
-  </p>
-</div>
-            <!-- Farida Banu S. -->
-<div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
-  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-pink-100 to-pink-200 text-pink-600 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white outline outline-pink-100">
-    <i data-lucide="palette" class="w-10 h-10"></i>
-  </div>
-  <h3 class="font-black text-xl text-gray-900 mb-1">Farida Banu S.</h3>
-  <p class="text-sm text-pink-600 font-bold uppercase tracking-wider mb-4">Design & Promotions Lead</p>
-  <p class="text-gray-500 text-sm">
-    Creative designer and promotions lead with contributions to multiple review articles. Actively manages social media presence and shares academic content through SlideShare.
-  </p>
-</div>
-           <!-- Meena G. -->
-<div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
-  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-purple-100 to-purple-200 text-purple-600 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white outline outline-purple-100">
-    <i data-lucide="palette" class="w-10 h-10"></i>
-  </div>
-  <h3 class="font-black text-xl text-gray-900 mb-1">Meena G.</h3>
-  <p class="text-sm text-purple-600 font-bold uppercase tracking-wider mb-4">Design & Promotions Lead</p>
-  <p class="text-gray-500 text-sm">
-    Creative designer and promotions specialist. Contributed as an author for the Moringa Oleifera research project, blending scientific insight with visual communication.
-  </p>
-</div>
+      
+<!-- ================= ABOUT THE AUTHORS PAGE ================= -->
+<div id="page-about" class="hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 author-page">
 
-<!-- Sameera P. -->
-<div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
-  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-green-100 to-green-200 text-green-600 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white outline outline-green-100">
-    <i data-lucide="flask-conical" class="w-10 h-10"></i>
-  </div>
-  <h3 class="font-black text-xl text-gray-900 mb-1">Sameera P.</h3>
-  <p class="text-sm text-green-600 font-bold uppercase tracking-wider mb-4">Pharmaceutics & Digital Lead</p>
-  <p class="text-gray-500 text-sm">
-    Author of the In-Situ Gels research project. Specializes in pharmaceutics and manages social media development, enhancing digital presence and engagement.
-  </p>
-</div>     
+    <div class="author-hero fade-in">
+      <div class="author-kicker"><span>✦</span> THE PEOPLE BEHIND PG26</div>
+      <h1 class="font-heading">Meet The Authors</h1>
+      <p class="author-intro">
+        The ideas, research and creativity behind PharmacyGuides26 — brought together
+        to make pharmacy learning simpler, smarter and more engaging.
+      </p>
+      <div class="author-quote">
+        <span class="quote-mark">“</span>
+        <p>Education is the wind beneath our wings. We aim to enhance those wings to help you soar to new heights in Pharmacy.</p>
+      </div>
+    </div>
+
+    <!-- Doodle / anime-style author stage -->
+    <section class="doodle-stage" aria-label="PharmacyGuides26 author illustration">
+      <div class="doodle-grid"></div>
+      <div class="doodle-spark spark-a">✦</div>
+      <div class="doodle-spark spark-b">✧</div>
+      <div class="doodle-spark spark-c">•</div>
+      <div class="doodle-note note-left">RESEARCH<br>+<br>CREATIVITY</div>
+      <div class="doodle-note note-right">LEARN<br>BUILD<br>SHARE</div>
+
+      <div class="anime-person">
+        <div class="anime-hair-back"></div>
+        <div class="anime-head">
+          <div class="anime-hair"></div>
+          <div class="anime-face">
+            <span class="eye eye-left"></span>
+            <span class="eye eye-right"></span>
+            <span class="blush blush-left"></span>
+            <span class="blush blush-right"></span>
+            <span class="smile"></span>
           </div>
         </div>
+        <div class="anime-neck"></div>
+        <div class="anime-body">
+          <div class="coat-lapel left"></div>
+          <div class="coat-lapel right"></div>
+          <div class="coat-pocket">✦</div>
+          <div class="shirt"></div>
+        </div>
+        <div class="anime-arm arm-left"></div>
+        <div class="anime-arm arm-right"></div>
+        <div class="anime-hand hand-left">✎</div>
+        <div class="anime-hand hand-right">💊</div>
       </div>
 
-      <!-- ================= WISHLIST PAGE ================= -->
+      <div class="doodle-caption">
+        <strong>PHARMACYGUIDES26</strong>
+        <span>Ideas → Research → Knowledge</span>
+      </div>
+    </section>
+
+    <!-- Team cards -->
+    <div class="author-section-heading">
+      <span>THE TEAM</span>
+      <h2>Meet the people</h2>
+      <p class="author-team-intro">All four members of the PharmacyGuides26 author team are <strong>pharmacists</strong>, bringing together pharmaceutical knowledge, research, design and digital creativity.</p>
+    </div>
+
+    <div class="author-grid">
+
+      <article class="author-card author-card-blue">
+        <div class="author-avatar">
+          <div class="avatar-person avatar-banny">
+            <div class="avatar-hair"></div><div class="avatar-head"><div class="avatar-face"><span class="avatar-eye left"></span><span class="avatar-eye right"></span><span class="avatar-mouth"></span></div></div>
+            <div class="avatar-neck"></div><div class="avatar-body"></div>
+          </div><span class="avatar-badge">⌨</span><span class="avatar-spark">✦</span>
+        </div>
+        <div class="author-card-top"><span>01</span><span>TECH + RESEARCH</span></div>
+        <h3>Banny S.V.</h3>
+        <p class="author-role">Pharmacist · Web Developer & Research Author</p>
+        <p class="author-bio">Pharmacist, lead developer and manager of PharmacyGuides26. Researcher in NDDS & Matrix Tablets. Together with Farida Banu S., published <strong>4+ review articles</strong> and co-authored the book <strong>Nano Particles & Nano Carriers in Drug Delivery Systems</strong>.</p>
+        <div class="author-tags"><span>Web</span><span>NDDS</span><span>Research</span></div>
+      </article>
+
+      <article class="author-card author-card-pink">
+        <div class="author-avatar">
+          <div class="avatar-person avatar-farida">
+            <div class="avatar-hair"></div><div class="avatar-head"><div class="avatar-face"><span class="avatar-eye left"></span><span class="avatar-eye right"></span><span class="avatar-mouth"></span></div></div>
+            <div class="avatar-neck"></div><div class="avatar-body"></div>
+          </div><span class="avatar-badge">✦</span><span class="avatar-spark">♡</span>
+        </div>
+        <div class="author-card-top"><span>02</span><span>DESIGN + MEDIA</span></div>
+        <h3>Farida Banu S.</h3>
+        <p class="author-role">Pharmacist · Design & Promotions Lead</p>
+        <p class="author-bio">Pharmacist, creative designer and promotions lead. Together with Banny S.V., published <strong>4+ review articles</strong> and co-authored the book <strong>Nano Particles & Nano Carriers in Drug Delivery Systems</strong>. Also contributes to academic content and digital promotions.</p>
+        <div class="author-tags"><span>Design</span><span>Content</span><span>Social</span></div>
+      </article>
+
+      <article class="author-card author-card-purple">
+        <div class="author-avatar">
+          <div class="avatar-person avatar-meena">
+            <div class="avatar-hair"></div><div class="avatar-head"><div class="avatar-face"><span class="avatar-eye left"></span><span class="avatar-eye right"></span><span class="avatar-mouth"></span></div></div>
+            <div class="avatar-neck"></div><div class="avatar-body"></div>
+          </div><span class="avatar-badge">✎</span><span class="avatar-spark">✧</span>
+        </div>
+        <div class="author-card-top"><span>03</span><span>CREATIVE + SCIENCE</span></div>
+        <h3>Meena G.</h3>
+        <p class="author-role">Pharmacist · Design & Promotions Lead</p>
+        <p class="author-bio">Pharmacist, creative designer and promotions specialist. Contributed as an author for the Moringa Oleifera research project, blending scientific insight with visual communication.</p>
+        <div class="author-tags"><span>Creative</span><span>Research</span><span>Visuals</span></div>
+      </article>
+
+      <article class="author-card author-card-green">
+        <div class="author-avatar">
+          <div class="avatar-person avatar-sameera">
+            <div class="avatar-hair"></div><div class="avatar-head"><div class="avatar-face"><span class="avatar-eye left"></span><span class="avatar-eye right"></span><span class="avatar-mouth"></span></div></div>
+            <div class="avatar-neck"></div><div class="avatar-body"></div>
+          </div><span class="avatar-badge">⚗</span><span class="avatar-spark">✦</span>
+        </div>
+        <div class="author-card-top"><span>04</span><span>PHARMACEUTICS + DIGITAL</span></div>
+        <h3>Sameera P.</h3>
+        <p class="author-role">Pharmacist · Pharmaceutics & Digital Lead</p>
+        <p class="author-bio">Pharmacist and author of the In-Situ Gels research project. Specializes in pharmaceutics and digital development, helping strengthen the academic and social media presence of PharmacyGuides26.</p>
+        <div class="author-tags"><span>Pharmaceutics</span><span>Digital</span><span>Research</span></div>
+      </article>
+
+    </div>
+
+    <section class="author-book-feature">
+      <div class="book-feature-copy">
+        <span class="book-eyebrow">📚 OUR PUBLISHED BOOK</span>
+        <h3>Nano Particles & Nano Carriers in Drug Delivery Systems</h3>
+        <p>Co-authored by <strong>Banny S.V. & Farida Banu S.</strong> — created to bring together key concepts in nanotechnology and drug delivery for pharmacy learners and researchers.</p>
+        <div class="book-feature-pills"><span>Co-authored by Banny S.V. & Farida Banu S.</span><span>Available on Amazon</span></div>
+        <a class="book-amazon-btn" href="https://www.amazon.com/dp/B0GN8QDM2R" target="_blank" rel="noopener noreferrer">
+          <span>View Book on Amazon</span><span>↗</span>
+        </a>
+      </div>
+      <div class="book-feature-art">
+        <div class="book-glow"></div>
+        <div class="book-image-frame">
+          <div class="book-image-badge">AMAZON EDITION</div>
+          <img src="./book cover 1.jpeg" alt="Nano Particles &amp; Nano Carriers in Drug Delivery Systems book cover" class="book-cover-real" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="book-image-fallback" style="display:none;">
+            <strong>NANO<br>PARTICLES<br>&amp; NANO<br>CARRIERS</strong>
+            <span>DRUG DELIVERY SYSTEMS</span>
+          </div>
+          <div class="book-image-shine"></div>
+        </div>
+        <div class="book-spark">✦</div>
+      </div>
+    </section>
+
+    <div class="author-footer-line">
+      <span>BUILT WITH CURIOSITY</span>
+      <span>PHARMACYGUIDES26 © 2026</span>
+      <span>MADE FOR LEARNERS</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= WISHLIST PAGE ================= -->
       <div id="page-wishlist" class="hidden">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
           <div class="flex items-center gap-4 mb-8 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
@@ -669,7 +920,7 @@
           <div class="text-center md:text-left">
             <div class="flex items-center justify-center md:justify-start gap-3 mb-3">
            <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg overflow-hidden">
-    <img src="./pg26.png" alt="Logo" class="w-7 h-7 object-contain">
+    <img src="./pg26.png" alt="PharmacyGuides26 logo" class="w-7 h-7 object-contain">
 </div>
               <div>
                 <span class="text-2xl font-heading font-bold text-white block leading-none">PharmacyGuides26 
@@ -714,7 +965,7 @@ class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text
 </a>
 
 <!-- Instagram -->
-<a href="https://www.instagram.com/pharmacyguides26?utm_source=qr&igsh=MXM2MGIzZHFzemp4bg%3D%3D" target="_blank"
+<a href="https://www.instagram.com/pharmacyguides26/" target="_blank"
 class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-pink-500 transition-all">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
@@ -726,7 +977,7 @@ class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text
 </a>
 
 <!-- YouTube -->
-<a href="https://youtube.com/@pharmacyguides26?si=BTPPfofRp9Bp-fJH" 
+<a href="https://youtube.com/@pharmacyguides26" 
 target="_blank"
 class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-all">
 
@@ -782,7 +1033,7 @@ discount: 85,
       { 
         id: '2', 
         title: 'Advanced Instrumental Techniques in Analysis', 
-        author: ' Sameera P.', 
+        author: 'Sameera P.', 
         category: 'Analysis', 
        price: 1600,
 originalPrice: 11000,
@@ -971,6 +1222,7 @@ discount: 85,
       updateWishlistUI();
       lucide.createIcons();
       initFestivalGreeting();
+      initInstagramWelcome();
     };
 
     function loadLocalData() {
@@ -986,6 +1238,38 @@ discount: 85,
 
     function saveLocalData() {
       localStorage.setItem('pg26_wishlist', JSON.stringify(wishlist));
+    }
+
+
+    // ================= INSTAGRAM WELCOME POPUP =================
+    function openInstagramWelcome() {
+      const modal = document.getElementById('instagram-welcome-modal');
+      if (!modal) return;
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeInstagramWelcome() {
+      const modal = document.getElementById('instagram-welcome-modal');
+      if (modal) modal.classList.remove('show');
+      document.body.style.overflow = '';
+      sessionStorage.setItem('pg26_instagram_welcome_seen', '1');
+    }
+
+    document.addEventListener('click', (event) => {
+      const modal = document.getElementById('instagram-welcome-modal');
+      if (event.target === modal) closeInstagramWelcome();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeInstagramWelcome();
+    });
+
+    // Show once per browser session after the page has loaded.
+    function initInstagramWelcome() {
+      if (sessionStorage.getItem('pg26_instagram_welcome_seen') === '1') return;
+      setTimeout(openInstagramWelcome, 1100);
     }
 
     // ================= NAVIGATION =================
@@ -1315,7 +1599,6 @@ function submitReview(e) {
     rating: currentRating,
     review_text: textInput.value.trim(),
     date: new Date().toLocaleDateString(),
-    verified: true
   };
 
   // Add to local data
